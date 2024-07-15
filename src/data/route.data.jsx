@@ -1,33 +1,47 @@
-import { BiLogIn } from "react-icons/bi"
-import { BsProjectorFill } from "react-icons/bs"
-import { FaBlog, FaHome, FaInfoCircle } from "react-icons/fa"
-import { FcAbout } from "react-icons/fc"
-import { FiMail } from "react-icons/fi"
-import { GrContact } from "react-icons/gr"
-import { MdHome, MdWork ,MdArticle} from "react-icons/md"
+import {
+  Home,
+  User,
+  Briefcase,
+  FileText,
+  Mail,
+  FolderOpen,
+  Award,
+} from "lucide-react";
 
-const navListe = [
-    {
-        icone : <FaHome className="size-5"/>,
-        nom : "Accueil",
-    },
-    {
-        icone : <FaInfoCircle className="size-5"/>,
-        nom : "About"
-    },
-
-    {
-        icone : <MdWork className="size-5"/>,
-        nom : "Work",
-    },
-    {
-        icone : <MdArticle className="size-5"/>,
-        nom : "blog",
-    },
-    {
-        icone : <FiMail className="size-5"/>,
-        nom : "contact",
-    },
-]
-
-export {navListe}
+export const navListe = [
+  {
+    path: "/",
+    nom: "Accueil",
+    icone: <Home className="w-5 h-5" />,
+  },
+  {
+    path: "/about",
+    nom: "À propos",
+    icone: <User className="w-5 h-5" />,
+  },
+  {
+    path: "/credentials",
+    nom: "Credentials",
+    icone: <Award className="w-5 h-5" />,
+  },
+  {
+    path: "/service",
+    nom: "Services",
+    icone: <Briefcase className="w-5 h-5" />,
+  },
+  {
+    path: "/work",
+    nom: "Projets",
+    icone: <FolderOpen className="w-5 h-5" />,
+  },
+  // {
+  //   path: "/blog",
+  //   nom: "Blog",
+  //   icone: <FileText className="w-5 h-5" />,
+  // },
+  {
+    path: "/contact",
+    nom: "Contact",
+    icone: <Mail className="w-5 h-5" />,
+  },
+];
