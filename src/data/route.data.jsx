@@ -5,38 +5,19 @@ const navListe = [
     {
         icone : "",
         nom : "Accueil",
-        elemet : <Accueil/>
     },
     {
         icone : "",
-        nom : "About",
-        elemet : <Accueil/>
+        nom : "About"
     },
-    {
-        icone : "",
-        nom : "service",
-        elemet : <Accueil/>
-    },
-    {
-        icone : "",
-        nom : "Competence",
-        elemet : <Accueil/>
 
-    },
     {
         icone : "",
-        nom : "Experience",
-        elemet : <Accueil/>
-    },
-    {
-        icone : "",
-        nom : "projet",
-        elemet : <Accueil/>
+        nom : "Work",
     },
     {
         icone : "",
         nom : "contact",
-        elemet : <Contact/>
     },
 ]
 
