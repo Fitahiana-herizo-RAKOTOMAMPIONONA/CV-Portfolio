@@ -12,6 +12,9 @@ export default function Accueil (){
         <div className=" bg-black md mt-3 w-[100%] text-sm p-5 rounded-2xl sm:w-[50%]: lg:">
             Lorem ipsum, dolor sit amet consectet
         </div>
-        <CardAccueil/>
+        <CardAccueil
+            description="AN DEVELOPPER" 
+            title="About me ." 
+        />
     </div>
 }
