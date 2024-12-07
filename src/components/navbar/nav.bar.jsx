@@ -41,8 +41,8 @@ export default function NavBar() {
                     className="absolute right-3 top-4 sm:hidden border-0"
                     onClick={toggleClassMenu}
                 >
-                    <div className="text-xl font-semibold">
-                        {isMenuActive ? <MdClose /> : <MdOutlineMenu size={20} />}
+                    <div className="font-semibold">
+                        {isMenuActive ? <MdClose className="text-[30px]"/> : <MdOutlineMenu className="text-[30px]"/>}
                     </div>
                 </button>
                 <div

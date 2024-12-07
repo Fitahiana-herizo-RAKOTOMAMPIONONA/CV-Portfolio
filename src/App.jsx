@@ -10,12 +10,12 @@ function App() {
   return (
     <div className='max-w-[1500px] pl-6 pr-6 m-auto relative'>
       <NavBar/>
-      <div className='mt-[80px] mb-10'>
+      <div className='mt-[80px] mb-10 min-h-[65vh]'>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Accueil/>}></Route>
             <Route path='/About' element={<About/>}></Route>
-            <Route path='/projet' element={<Projet/>}></Route>
+            <Route path='/work' element={<Projet/>}></Route>
             <Route path='/contact' element={<Contact/>}></Route>
           </Routes>
         </BrowserRouter>

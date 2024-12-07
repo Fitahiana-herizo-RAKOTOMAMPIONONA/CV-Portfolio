@@ -14,7 +14,7 @@ const experience=[
     },
 ];
 
-const formation=[
+const formation = [
     {
         title : "Licence Informatique",
         poste: "ISPM",

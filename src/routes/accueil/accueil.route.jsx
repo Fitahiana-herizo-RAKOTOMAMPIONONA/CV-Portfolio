@@ -1,9 +1,17 @@
-import { GrContact } from "react-icons/gr"
+import { useEffect } from "react"
 import CardAccueil from "../../components/card/card.accueil.jsx"
 import CardDeco from "../../components/card/card.accueil.deco.jsx"
+import { slideINleft, slideInRight, slideINtop } from "../../animation/animation.js"
 
 export default function Accueil (){
-    return <div className="grid grid-cols-1 gap-3">
+    useEffect(()=>{
+        slideINtop(".cardBox1")
+        slideINtop(".cardBox2")
+        slideINleft(".card2")
+        slideInRight(".card3")
+        slideInRight(".input3")
+    },[])
+    return <div className="cardBox1 grid grid-cols-1 gap-3">
         <CardAccueil 
             description="AN DEVELOPPER" 
             title="Herizo RAKOTOMAMPIONONA ." 
@@ -12,7 +20,7 @@ export default function Accueil (){
             image="./assets/image/profile.jpg"
             to="/about"
         />
-        <div className=" bg-black md w-[100%] text-sm p-5 rounded-2xl sm:w-[50%]: lg:">
+        <div className="cardBox2 bg-black md w-[100%] text-sm p-5 rounded-2xl sm:w-[50%]: lg:">
             Lorem ipsum, dolor sit amet consectet
         </div>
         <CardAccueil
@@ -31,8 +39,9 @@ export default function Accueil (){
             image="./assets/image/my-works.png"
         />
         <CardAccueil
-            description="AN DEVELOPPER" 
+            description="MORE" 
             title="Contact me."
+            to="/Contact"
             // icone={GrContact}
         />
         <div className="bg-black rounded-lg p-6 md:col-span-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
