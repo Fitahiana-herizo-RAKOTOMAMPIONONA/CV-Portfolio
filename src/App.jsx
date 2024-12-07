@@ -7,19 +7,18 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='w-[90%] m-auto'>
+    <div className='max-w-[1500px] pl-6 pr-6 m-auto relative'>
       <NavBar/>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Accueil/>}></Route>
-          <Route path='/About' element={<About/>}></Route>
-          <Route path='/service' element={<Service/>}></Route>
-          <Route path='/Competence' element={<Competence/>}></Route>
-          <Route path='/Experience' element={<Experience/>}></Route>
-          <Route path='/projet' element={<Projet/>}></Route>
-          <Route path='/contact' element={<Contact/>}></Route>
-        </Routes>
-      </BrowserRouter>
+      <div className='mt-[80px] mb-10'>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Accueil/>}></Route>
+            <Route path='/About' element={<About/>}></Route>
+            <Route path='/projet' element={<Projet/>}></Route>
+            <Route path='/contact' element={<Contact/>}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   )
 }

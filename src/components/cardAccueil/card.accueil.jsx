@@ -15,8 +15,8 @@ export default function CardAccueil(props) {
                     <div className="mt-1">
                         {props.message}
                     </div>
-                    <div className="absolute right-2 top-2 text-gray-500">
-                        --
+                    <div className="absolute right-2 bottom text-gray-500">
+                        <img src="./assets/image/icon.svg" alt="" srcSet="" />
                     </div>
                 </div>
             </div>

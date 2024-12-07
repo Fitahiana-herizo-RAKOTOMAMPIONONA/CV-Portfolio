@@ -13,16 +13,20 @@ export default function Accueil (){
             Lorem ipsum, dolor sit amet consectet
         </div>
         <CardAccueil
+        
             description="AN DEVELOPPER" 
             title="Credentials" 
+            image = "./assets/image/sign.png"
         />
         <CardAccueil
             description="AN DEVELOPPER" 
-            title="About me ." 
+            title="About me ."
+            image = "./assets/image/gfonts.png"
         />
         <CardAccueil
             description="AN DEVELOPPER" 
             title="Project ." 
+            image="./assets/image/my-works.png"
         />
         <CardAccueil
             description="AN DEVELOPPER" 
@@ -42,7 +46,8 @@ export default function Accueil (){
                 <p className="text-gray-400">Projects</p>
             </div>
         </div>
-        <div className="bg-black rounded-lg p-6 md:col-span-4 text-center">
+        <div className="bg-black relative rounded-lg p-6 md:col-span-4 text-center overflow-hidden">
+            <img src="./assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px]"/>
             <h2 className="text-2xl font-bold">Let's work together.</h2>
         </div>
     </div>
