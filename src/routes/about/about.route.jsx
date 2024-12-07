@@ -1,4 +1,5 @@
 import CardDeco from "../../components/card/card.accueil.deco.jsx"
+import CardAccueil from "../../components/card/card.accueil.jsx"
 import CardExperience from "../../components/card/card.experience.jsx"
 import { experience, formation } from "../../data/data.experience.jsx"
 
@@ -15,5 +16,10 @@ export default function About (){
         <CardExperience title="experience" data={experience}/>
         <CardExperience title="formation" data={formation}/>
         <CardDeco title="Let's work" titleBlue ="together."/>
+        <CardAccueil
+            description="MORE ABOUT ME" 
+            title="Credentials" 
+            image = "./assets/image/sign.png"
+        />
     </div>
 }
