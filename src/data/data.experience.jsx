@@ -25,7 +25,7 @@ const formation=[
         date: "2021"
     },{
         title : "BEPC option B",
-        poste: "E S C Anosizato",
+        poste: "ESC Anosizato",
         date: "2018"
     },
 ];
