@@ -3,11 +3,17 @@ export default function CardAccueil(props) {
         <a href={props.to} className="block">
             <div className="bg-black text-white w-full h-auto p-5 pt-10 pb-10 rounded-2xl sm:w-1/2 lg:w-1/3 hover:scale-105 transition-transform duration-300 shadow-lg">
                 <div className="w-48 m-auto">
-                    <img 
-                        src={props.image} 
-                        alt={props.title} 
-                        className="w-full max-h-48 object-center rounded-tl-lg rounded-br-lg object-cover" 
-                    />
+                    {
+                        props.image ?
+                            <img
+                                src={props.image}
+                                alt={props.title}
+                                className="w-full max-h-48 object-center rounded-tl-lg rounded-br-lg object-cover"
+                            /> :
+                            props.icone ?
+                                <props.icone /> :
+                                null
+                    }
                 </div>
                 <div className="text-sm p-2 relative">
                     <div className="text-gray-400">{props.description}</div>
