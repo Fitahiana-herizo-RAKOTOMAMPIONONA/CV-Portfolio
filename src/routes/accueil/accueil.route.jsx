@@ -1,6 +1,6 @@
 import { GrContact } from "react-icons/gr"
-import CardAccueil from "../../components/cardAccueil/card.accueil"
-import CardDeco from "../../components/cardAccueil/card.accueil.deco.jsx"
+import CardAccueil from "../../components/card/card.accueil.jsx"
+import CardDeco from "../../components/card/card.accueil.deco.jsx"
 
 export default function Accueil (){
     return <div className="grid grid-cols-1 gap-3">
