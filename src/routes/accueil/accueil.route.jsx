@@ -8,13 +8,13 @@ export default function Accueil (){
             message="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Qui cum aut beatae"
             image="./assets/image/profile.jpg"
+            to="/about"
         />
         <div className=" bg-black md w-[100%] text-sm p-5 rounded-2xl sm:w-[50%]: lg:">
             Lorem ipsum, dolor sit amet consectet
         </div>
         <CardAccueil
-        
-            description="AN DEVELOPPER" 
+            description="MORE ABOUT ME" 
             title="Credentials" 
             image = "./assets/image/sign.png"
         />
@@ -24,7 +24,7 @@ export default function Accueil (){
             image = "./assets/image/gfonts.png"
         />
         <CardAccueil
-            description="AN DEVELOPPER" 
+            description="SHOWCASE" 
             title="Project ." 
             image="./assets/image/my-works.png"
         />
@@ -48,7 +48,7 @@ export default function Accueil (){
         </div>
         <div className="bg-black relative rounded-lg p-6 md:col-span-4 text-center overflow-hidden">
             <img src="./assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px]"/>
-            <h2 className="text-2xl font-bold">Let's work together.</h2>
+            <h2 className="text-2xl font-bold">Let's work <span className="text-blue-800">together.</span></h2>
         </div>
     </div>
 }

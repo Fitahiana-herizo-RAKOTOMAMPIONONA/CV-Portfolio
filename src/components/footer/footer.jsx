@@ -8,8 +8,8 @@ export default function Footer() {
         <div
             className={`w-full p-6`}
         >
-            <div className="text-center">
-                Port <span className="text-orange-500 uppercase">Folio</span>.
+            <div className="text-center text-xl font-semibold">
+                Port<span className="text-orange-500 uppercase">Folio</span>.
             </div>
             <div className="flex gap-6 justify-center lg:gap-10">
                 {navListe.map((item, key) => (
