@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './components/navbar/nav.bar'
 import { About, Accueil, Competence, Contact, Experience, Projet, Service } from './routes/export.route'
 import './App.css'
+import Footer from './components/footer/footer'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,6 +20,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
+      <Footer/>
     </div>
   )
 }
