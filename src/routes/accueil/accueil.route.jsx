@@ -7,9 +7,6 @@ export default function Accueil (){
     useEffect(()=>{
         slideINtop(".cardBox1")
         slideINtop(".cardBox2")
-        slideINleft(".card2")
-        slideInRight(".card3")
-        slideInRight(".input3")
     },[])
     return <div className="cardBox1 grid grid-cols-1 gap-3">
         <CardAccueil 

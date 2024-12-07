@@ -14,7 +14,7 @@ const slideINtop = (elem , delay , duratio) =>{
             y: 0,
             scrollTrigger: {
                 trigger: elem,
-                start: "top center",
+                start: "top bottom",
                 end: "bottom center"
             }
         },
@@ -32,7 +32,7 @@ const slideINleft = (elem , delay , duratio) =>{
             x: 0,
             scrollTrigger: {
                 trigger: elem,
-                start: "top center",
+                start: "top bottom",
                 end: "bottom center"
             }
         },
