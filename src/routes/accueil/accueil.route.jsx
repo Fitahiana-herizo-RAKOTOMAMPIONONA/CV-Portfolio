@@ -27,13 +27,19 @@ export default function Accueil (){
         />
         <CardAccueil
             description="AN DEVELOPPER" 
-            title="About me ."
+            title="gFonts"
             image = "./assets/image/gfonts.png"
         />
         <CardAccueil
             description="SHOWCASE" 
             title="Project ." 
             image="./assets/image/my-works.png"
+        />
+        <CardAccueil
+            description="Specialisation" 
+            title="Service offering" 
+            image="./assets/image/my-works.png"
+            to="/service"
         />
         <CardAccueil
             description="MORE" 
