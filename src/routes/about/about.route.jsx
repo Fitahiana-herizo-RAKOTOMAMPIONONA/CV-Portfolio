@@ -18,6 +18,7 @@ export default function About (){
             description="MORE ABOUT ME" 
             title="Credentials" 
             image = "./assets/image/sign.png"
+            to="/credentials"
         />
     </div>
 }
