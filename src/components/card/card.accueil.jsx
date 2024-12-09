@@ -1,7 +1,7 @@
 export default function CardAccueil(props) {
     return (
         <a href={props.to} className="block">
-            <div className="bg-black text-white w-full h-auto p-5 pt-10 pb-10 rounded-2xl sm:w-1/2 lg:w-1/3 hover:scale-105 transition-transform duration-300 shadow-lg">
+            <div className="bg-black text-white w-full h-auto p-5 pt-10 pb-10 rounded-2xl hover:scale-105 transition-transform duration-300 shadow-lg">
                 <div className="w-48 m-auto">
                     {
                         props.image ?

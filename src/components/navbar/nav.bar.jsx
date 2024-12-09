@@ -36,7 +36,6 @@ export default function NavBar() {
             } xl:w-[100%]`}
         >
             <div className="block relative mb-3 sm:flex justify-between pt-5 pb-1 pl-2 pr-2">
-                {/* <div className="text-xl font-semibold">Herizo</div> */}
                 <img src="./ico.png" alt="" srcSet="" className="w-10" />
                 <button
                     className="absolute right-3 top-4 sm:hidden border-0"

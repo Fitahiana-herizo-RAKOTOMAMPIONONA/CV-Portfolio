@@ -8,7 +8,7 @@ export default function Accueil (){
         slideINtop(".cardBox1")
         slideINtop(".cardBox2")
     },[])
-    return <div className="cardBox1 grid grid-cols-1 gap-3">
+    return <div className="cardBox1 grid grid-cols-1 gap-6 md:grid-cols-3">
         <CardAccueil 
             description="AN DEVELOPPER" 
             title="Herizo RAKOTOMAMPIONONA ." 
@@ -17,7 +17,7 @@ export default function Accueil (){
             image="./assets/image/profile.jpg"
             to="/about"
         />
-        <div className="cardBox2 bg-black md w-[100%] text-sm p-5 rounded-2xl sm:w-[50%]: lg:">
+        <div className="cardBox2 bg-black md w-[100%] max-h-[70px] text-sm p-5 rounded-2xl sm:w-[50%]: lg:col-span-1">
             Lorem ipsum, dolor sit amet consectet
         </div>
         <CardAccueil

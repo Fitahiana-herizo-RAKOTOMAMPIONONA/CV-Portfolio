@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './components/navbar/nav.bar'
-import { About, Accueil, Competence, Contact, Experience, Projet, Service } from './routes/export.route'
+import { About, Accueil, Competence, Contact, Experience, Work, Service } from './routes/export.route'
 import './App.css'
 import Footer from './components/footer/footer'
 function App() {
@@ -15,9 +15,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Accueil/>}></Route>
             <Route path='/About' element={<About/>}></Route>
-            <Route path='/work' element={<Projet/>}></Route>
+            <Route path='/work' element={<Work/>}></Route>
             <Route path='/contact' element={<Contact/>}></Route>
-
             <Route path='/service' element={<Service/>}/>
           </Routes>
         </BrowserRouter>
