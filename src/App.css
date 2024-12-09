@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.backgroundPers{
+  @apply bg-[url(/assets/image/bg1.png)] bg-black bg-opacity-50 backdrop-blur-xl;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -22,19 +22,19 @@ export default function Contact (props){
                     Social media
                 </div>
                 <div className="flex gap-5 justify-start p-5 sm:gap-10 sm:justify-center">
-                    <div className="h-[80px] w-[80px] bg-black pt-4  rounded-lg">
+                    <div className="h-[80px] w-[80px] backgroundPers pt-4  rounded-lg">
                         <FaFacebook className="text-[40px] m-auto"/>
                     </div>
-                    <div className="h-[80px] w-[80px] bg-black pt-4  rounded-lg">
+                    <div className="h-[80px] w-[80px] backgroundPers pt-4  rounded-lg">
                         <LiaLinkedinIn className="text-[40px] m-auto"/>
                     </div>
-                    <div className="h-[80px] w-[80px] bg-black pt-4  rounded-lg">
+                    <div className="h-[80px] w-[80px] backgroundPers pt-4  rounded-lg">
                         <BsInstagram className="text-[40px] m-auto"/>
                     </div>
                 </div>
             </div>
         </div>
-        <div className="relative overflow-hidden bg-black p-6 rounded-2xl sm:flex-1">
+        <div className="relative overflow-hidden backgroundPers p-6 rounded-2xl sm:flex-1">
             <img src="./assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px] right-3"/>
             <h2 className="text-2xl font-bold mb-4 mt-4">Let's work <span className="text-blue-800">together.</span></h2>
             <div className="block gap-3">

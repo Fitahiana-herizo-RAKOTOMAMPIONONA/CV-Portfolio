@@ -1,6 +1,6 @@
 export default function CardExperience(props) {
     return (
-        <div className="w-full bg-black p-6 rounded-2xl">
+        <div className="w-full backgroundPers p-6 rounded-2xl">
             <div className="text-left text-xl font-bold capitalize">
                 {
                     props.title
