@@ -1,12 +1,13 @@
 import { BsInstagram } from "react-icons/bs"
-import { FaFacebook } from "react-icons/fa6"
 import { LiaLinkedinIn } from "react-icons/lia"
 import { experience, formation } from "../../data/data.experience"
-import CardExperience from "../../components/card/card.experience"
 import { CredentialsComponent } from "../../components/card/card.credentials"
+import { FaFacebook } from "react-icons/fa6"
+import skills from "../../data/skills.data"
+import { SkillsComponent } from "../../components/card/skills.card"
+
 
 export default function Credentials (props){
-    // return <div className="block  lg:flex">
     return <div className="grid grid-cols-1 lg:grid-cols-3">
         <div className="backgroundPers p-6 m-auto w-full  rounded-3xl max-w-[500px]  lg:m-0">
             <img src="./assets/image/profile.jpg" alt="" className="w-full max-w-[500px] h-[200px] object-cover rounded-2xl lg:h-auto"/>
@@ -35,6 +36,18 @@ export default function Credentials (props){
             </div>
             <CredentialsComponent title="experience" data={experience}/>
             <CredentialsComponent title="education" data={formation}/>
+            <div className="p-6">
+                <div className="uppercase font-semibold text-xl pt-4 pb-4">
+                    Skills
+                </div>
+                <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-4">
+                    {
+                        skills.map((item,key)=>{
+                            return <SkillsComponent title={item.title} icone={item.icone} />
+                        })
+                    }
+                </div>
+            </div>
         </div>
     </div>
 }

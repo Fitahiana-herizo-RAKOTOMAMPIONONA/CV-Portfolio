@@ -6,6 +6,9 @@
 .backgroundPers{
   @apply bg-[url(/assets/image/bg1.png)] bg-zinc-700 bg-opacity-40 backdrop-blur-xl;
 }
+.iconeSkills{
+  @apply text-[40px] sm:text-[100px] m-auto;
+}
 
 @keyframes logo-spin {
   from {
