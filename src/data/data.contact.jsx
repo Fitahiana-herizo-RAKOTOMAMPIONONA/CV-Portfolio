@@ -1,6 +1,4 @@
 import { BiPhoneCall, BiPhone, BiMailSend } from "react-icons/bi"
-import { BsMailbox } from "react-icons/bs"
-import { GrContact } from "react-icons/gr" 
 BiMailSend
 const datacontact = [
     {

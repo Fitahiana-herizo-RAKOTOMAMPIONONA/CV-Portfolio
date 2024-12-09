@@ -17,10 +17,10 @@ export default function BoxContact(props)
                 </>
                 : props.contact1 ? <>
                         <div className="text-sm">
-                            <a href={`tel:+${props.contact1}`}>{props.contact1}</a>
+                            <a href={`tel:${props.contact1}`}>{props.contact1}</a>
                         </div>
                         <div className="text-sm">
-                            <a href={`tel:+${props.contact2}`}>{props.contact2}</a>
+                            <a href={`tel:${props.contact2}`}>{props.contact2}</a>
                         </div>
                     </> :
                     null

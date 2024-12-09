@@ -4,7 +4,7 @@
 
 
 .backgroundPers{
-  @apply bg-[url(/assets/image/bg1.png)] bg-black bg-opacity-50 backdrop-blur-xl;
+  @apply bg-[url(/assets/image/bg1.png)] bg-black bg-opacity-40 backdrop-blur-xl;
 }
 
 @keyframes logo-spin {
