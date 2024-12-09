@@ -106,6 +106,7 @@ export default function Accueil() {
         title="Credentials" 
         image="./assets/image/sign.png"
         className="cardBox4"
+        to="/credentials"
       />
       <CardAccueil
         description="SHOWCASE" 

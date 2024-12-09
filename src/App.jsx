@@ -5,6 +5,8 @@ import { About, Accueil, Competence, Contact, Experience, Work, Service } from '
 import './App.css'
 import Footer from './components/footer/footer'
 import WorkDetail from './routes/work/work.detail'
+import Credentials from './routes/credentials/credentials.route'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,6 +18,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Accueil/>}></Route>
             <Route path='/About' element={<About/>}></Route>
+            <Route path='/credentials' element={<Credentials/>}></Route>
             <Route path='/work' element={<Work/>}></Route>
             <Route path='/work/:id_work' element={<WorkDetail/>}></Route>
             <Route path='/contact' element={<Contact/>}></Route>
