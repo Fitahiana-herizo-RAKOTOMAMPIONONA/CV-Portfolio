@@ -4,11 +4,12 @@ import NavBar from './components/navbar/nav.bar'
 import { About, Accueil, Competence, Contact, Experience, Work, Service } from './routes/export.route'
 import './App.css'
 import Footer from './components/footer/footer'
+import WorkDetail from './routes/work/work.detail'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='max-w-[1500px] pl-6 pr-6 m-auto relative'>
+    <div className='max-w-[1280px] pl-6 pr-6 m-auto relative'>
       <NavBar/>
       <div className='mt-[80px] mb-10 min-h-[65vh]'>
         <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' element={<Accueil/>}></Route>
             <Route path='/About' element={<About/>}></Route>
             <Route path='/work' element={<Work/>}></Route>
+            <Route path='/work/:id_work' element={<WorkDetail/>}></Route>
             <Route path='/contact' element={<Contact/>}></Route>
             <Route path='/service' element={<Service/>}/>
           </Routes>

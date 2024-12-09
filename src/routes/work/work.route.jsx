@@ -6,7 +6,7 @@ export default function Work (){
     return <div>
         <Titre title="ALL project"/>
         <div className="grid grid-cols-1 gap-5">
-            <BoxWork type="Web deisigning" title="dynalic" image="./assets/image/icon.svg"/>
+            <BoxWork type="Web deisigning" title="dynalic" image="./assets/image/icon.svg" to="work/1"/>
             <BoxWork type="Web deisigning" title="dynalic" image="./assets/image/icon.svg"/>
             <BoxWork type="Web deisigning" title="dynalic" image="./assets/image/icon.svg"/>
             <BoxWork type="Web deisigning" title="dynalic" image="./assets/image/icon.svg"/>
