@@ -8,7 +8,7 @@ export default function Accueil (){
         slideINtop(".cardBox1")
         slideINtop(".cardBox2")
     },[])
-    return <div className="cardBox1 grid grid-cols-1 gap-6 md:grid-cols-3">
+    return <div className="cardBox1 grid grid-cols-1 gap-6 md:grid-cols-3: ">
         <CardAccueil 
             description="AN DEVELOPPER" 
             title="Herizo RAKOTOMAMPIONONA ." 
@@ -17,7 +17,7 @@ export default function Accueil (){
             image="./assets/image/profile.jpg"
             to="/about"
         />
-        <div className="cardBox2 bg-black md w-[100%] max-h-[70px] text-sm p-5 rounded-2xl sm:w-[50%]: lg:col-span-1">
+        <div className="cardBox2 bg-[url(/assets/image/bg1.png)] bg-black bg-opacity-50 md w-[100%] max-h-[70px] text-sm p-5 rounded-2xl sm:w-[50%]: lg:col-span-1">
             Lorem ipsum, dolor sit amet consectet
         </div>
         <CardAccueil
@@ -26,15 +26,16 @@ export default function Accueil (){
             image = "./assets/image/sign.png"
         />
         <CardAccueil
-            description="AN DEVELOPPER" 
-            title="gFonts"
-            image = "./assets/image/gfonts.png"
-        />
-        <CardAccueil
             description="SHOWCASE" 
             title="Project ." 
             image="./assets/image/my-works.png"
         />
+        <CardAccueil
+            description="AN DEVELOPPER" 
+            title="gFonts"
+            image = "./assets/image/gfonts.png"
+        />
+    
         <CardAccueil
             description="Specialisation" 
             title="Service offering" 
@@ -47,7 +48,7 @@ export default function Accueil (){
             to="/Contact"
             // icone={GrContact}
         />
-        <div className="bg-black rounded-lg p-6 md:col-span-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div className="bg-[url(/assets/image/bg1.png)] bg-black bg-opacity-50 rounded-lg p-6 md:col-span-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
                 <p className="text-2xl font-bold">7</p>
                 <p className="text-gray-400">Years Experience</p>
