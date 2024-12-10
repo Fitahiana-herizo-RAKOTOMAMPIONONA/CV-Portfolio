@@ -1,15 +1,10 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './components/navbar/nav.bar'
-import { About, Accueil, Competence, Contact, Experience, Work, Service } from './routes/export.route'
+import { About, Accueil, Contact, Work, Service ,Credentials , WorkDetail} from './routes/export.route'
 import './App.css'
 import Footer from './components/footer/footer'
-import WorkDetail from './routes/work/work.detail'
-import Credentials from './routes/credentials/credentials.route'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className='max-w-[1280px] pl-6 pr-6 m-auto relative'>
       <NavBar/>
