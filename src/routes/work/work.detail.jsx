@@ -5,7 +5,6 @@ import Titre2 from "../../components/titre/titre.text2";
 
 export default function WorkDetail (props){
     const params = useParams();
-    console.log(params);
     
     return <div>
         <Navigation nav1="work" nav2="Voteo"/>
