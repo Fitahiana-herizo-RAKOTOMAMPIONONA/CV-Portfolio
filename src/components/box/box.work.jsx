@@ -1,6 +1,6 @@
 export function BoxWork(props)
 {
-    return <a href={props.to}>
+    return <a href={`/work/${props.to}`}>
         <div className={`backgroundPers p-5 w-full bg-black max-w-[450px] rounded-3xl m-auto relative ${props.className}`}>
             <img src="./assets/image/gfonts.png" alt="" className="w-full max-h-[200px] bg-slate-50 rounded-2xl"/>
             <div className="uppercase text-gray-400 pt-4 pb-4 text-sm sm:text-lg">

@@ -13,7 +13,7 @@ export default function WorkDetail (props){
         <div>
             <img src="/assets/image/projet-1.jpg" alt="" className="w-full max-h-[400px] object-cover object-top" />
         </div>
-        <div className=" sm:rounded-3xl sm:flex bg-transparent backgroundPers relative overflow-hidden sm:mt-10">
+        <div className=" rounded-xl sm:rounded-3xl sm:flex bg-transparent backgroundPers relative overflow-hidden mt-10">
             <img src="/assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px] right-5"/>
             <div className="p-4 sm:backgroundPers  mt-4 sm:mt-0">
                 <Titre2 title="VOTEO"  className={"pt-4 pb-2"}/>
