@@ -1,7 +1,5 @@
 import { useParams } from "react-router-dom"
-import { Navigation } from "../../components/navigation/navigation"
-import { Titre } from "../../components/titre/titre.text"
-import Titre2 from "../../components/titre/titre.text2";
+import { Navigation, Titre, Titre2 } from "../../components/components.export";
 
 export default function WorkDetail (props){
     const params = useParams();

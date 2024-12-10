@@ -1,7 +1,4 @@
-import { BoxWork } from "../../components/box/box.work"
-import CardAccueil from "../../components/card/card.accueil"
-import CardDeco from "../../components/card/card.accueil.deco"
-import { Titre } from "../../components/titre/titre.text"
+import { BoxWork, CardAccueil, CardDeco, Titre } from "../../components/components.export"
 
 export default function Work() {
     const work = [
