@@ -1,8 +1,8 @@
 import { BsInstagram, BsSendArrowUp } from "react-icons/bs"
-import BoxContact from "../../components/card/box.contact"
 import { datacontact } from "../../data/data.contact"
 import { FaFacebook } from "react-icons/fa"
 import { LiaLinkedinIn } from "react-icons/lia"
+import { BoxContact } from "../../components/components.export"
 
 export default function Contact (props){
     return <div className="block  gap-5 lg:flex lg:mt-[150px]">

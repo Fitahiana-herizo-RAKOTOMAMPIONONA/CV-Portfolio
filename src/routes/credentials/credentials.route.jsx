@@ -4,8 +4,7 @@ import { experience, formation } from "../../data/data.experience"
 import { CredentialsComponent } from "../../components/card/card.credentials"
 import { FaFacebook } from "react-icons/fa6"
 import skills from "../../data/skills.data"
-import { SkillsComponent } from "../../components/card/skills.card"
-
+import { SkillsComponent } from "../../components/components.export"
 
 export default function Credentials (props){
     return <div className="grid grid-cols-1 lg:grid-cols-3">

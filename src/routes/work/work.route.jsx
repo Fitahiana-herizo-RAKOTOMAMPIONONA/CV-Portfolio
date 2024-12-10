@@ -1,7 +1,4 @@
-import { BoxWork } from "../../components/box/box.work"
-import CardAccueil from "../../components/card/card.accueil"
-import CardDeco from "../../components/card/card.accueil.deco"
-import { Titre } from "../../components/titre/titre.text"
+import { BoxWork, CardAccueil, CardDeco, Titre } from "../../components/components.export"
 
 export default function Work() {
     const work = [
@@ -9,31 +6,31 @@ export default function Work() {
             id: 1,
             type : "Web designing",
             title : "Dynamic", 
-            image: "./assets/image/icon.svg",
+            image: "./assets/image/projet-1.jpg",
         },
         {
             id: 2,
             type : "Web designing",
             title : "Dynamic", 
-            image: "./assets/image/icon.svg",
+            image: "./assets/image/projet-2.jpg",
         },
         {
             id: 3,
             type : "Web designing",
             title : "Dynamic", 
-            image: "./assets/image/icon.svg",
+            image: "./assets/image/projet-3.jpg",
         },
         {
             id: 4,
             type : "Web designing",
             title : "Dynamic", 
-            image: "./assets/image/icon.svg",
+            image: "./assets/image/projet-1.jpg",
         },
         {
             id: 5,
             type : "Web designing",
             title : "Dynamic", 
-            image: "./assets/image/icon.svg",
+            image: "./assets/image/projet-3.jpg",
         }
     ]
     return <div>
@@ -41,7 +38,7 @@ export default function Work() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {
                 work.map((item,key)=>{
-                    return <BoxWork type={item.type} title={item.title} image={item.image} to={item.id} />
+                    return <BoxWork key={key} type={item.type} title={item.title} image={item.image} to={item.id} />
                 })
             }
             <CardAccueil

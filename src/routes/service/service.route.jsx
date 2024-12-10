@@ -1,5 +1,4 @@
-import { Titre } from "../../components/titre/titre.text"
-import { BoxService } from "../../components/box/box.service"
+import { BoxService, Titre } from "../../components/components.export"
 import { dataservice } from "../../data/data.service"
 
 export default function Service (){
