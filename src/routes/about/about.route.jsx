@@ -1,7 +1,4 @@
-import CardDeco from "../../components/card/card.accueil.deco.jsx"
-import CardAccueil from "../../components/card/card.accueil.jsx"
-import CardExperience from "../../components/card/card.experience.jsx"
-import { Titre } from "../../components/titre/titre.text.jsx"
+import { CardAccueil, CardDeco, CardExperience, Titre } from "../../components/components.export.jsx"
 import { experience, formation } from "../../data/data.experience.jsx"
 
 export default function About (){
