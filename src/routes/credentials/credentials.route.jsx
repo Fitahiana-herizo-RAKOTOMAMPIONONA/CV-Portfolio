@@ -43,7 +43,7 @@ export default function Credentials (props){
                 <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-4">
                     {
                         skills.map((item,key)=>{
-                            return <SkillsComponent title={item.title} icone={item.icone} />
+                            return <SkillsComponent key={key} title={item.title} icone={item.icone} className={""}/>
                         })
                     }
                 </div>

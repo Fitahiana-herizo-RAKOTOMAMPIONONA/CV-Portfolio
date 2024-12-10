@@ -71,6 +71,7 @@ import { useEffect } from "react";
 import CardAccueil from "../../components/card/card.accueil.jsx";
 import CardDeco from "../../components/card/card.accueil.deco.jsx";
 import { slideINtop } from "../../animation/animation.js";
+import Statistique from "../../components/card/card.statistique.jsx";
 
 export default function Accueil() {
   useEffect(() => {
@@ -99,8 +100,7 @@ export default function Accueil() {
       <div className="cardBox3 backgroundPers text-sm p-5 rounded-2xl max-h-[70px] md:col-span-2 flex items-center justify-center">
         Lorem ipsum, dolor sit amet consectetur
       </div>
-      
-      {/* Deuxième ligne */}
+
       <CardAccueil
         description="MORE ABOUT ME" 
         title="Credentials" 
@@ -108,12 +108,15 @@ export default function Accueil() {
         className="cardBox4"
         to="/credentials"
       />
+
       <CardAccueil
         description="SHOWCASE" 
         title="Projects" 
         image="./assets/image/my-works.png"
         className="cardBox5"
+        to="/work"
       />
+      
       <CardAccueil
         description="AN DEVELOPER" 
         title="gFonts"
@@ -134,23 +137,7 @@ export default function Accueil() {
         className="cardBox8"
         to="/Contact"
       />
-  
-      <div className="cardBox9 backgroundPers rounded-lg p-6 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-        <div>
-          <p className="text-2xl font-bold">7</p>
-          <p className="text-gray-400">Years Experience</p>
-        </div>
-        <div>
-          <p className="text-2xl font-bold">+125</p>
-          <p className="text-gray-400">Clients Worldwide</p>
-        </div>
-        <div>
-          <p className="text-2xl font-bold">+210</p>
-          <p className="text-gray-400">Projects</p>
-        </div>
-      </div>
-  
-      {/* Dernière ligne */}
+      <Statistique/>
       <CardDeco title="Let's work" titleBlue="together." to="/contact" className={"md*:col-span-3"}/>
     </div>
   );  

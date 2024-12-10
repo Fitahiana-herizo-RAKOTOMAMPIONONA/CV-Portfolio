@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa"
 import { LiaLinkedinIn } from "react-icons/lia"
 
 export default function Contact (props){
-    return <div className="block  lg:flex gap-5">
+    return <div className="block  gap-5 lg:flex lg:mt-[150px]">
         <div className=" p-6 rounded-2xl sm:flex-1">
             <div>
                 <div className="uppercase text-left text-sm font-semibold">

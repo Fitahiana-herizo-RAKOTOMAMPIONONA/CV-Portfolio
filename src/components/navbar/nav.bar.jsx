@@ -41,7 +41,7 @@ export default function NavBar() {
                 className="max-w-[1280px] pl-6 pr-6 m-auto relative"
             >
                 <div className="block relative mb-3 sm:flex justify-between pt-5 pb-1 pl-2 pr-2">
-                    <img src="./ico.png" alt="" srcSet="" className="w-10 h-6 flex-2" />
+                    <img src="/ico.png" alt="" srcSet="" className="w-10 h-6 flex-2" />
                     <button
                         className="absolute right-0 top-4 sm:hidden border-0"
                         onClick={toggleClassMenu}
