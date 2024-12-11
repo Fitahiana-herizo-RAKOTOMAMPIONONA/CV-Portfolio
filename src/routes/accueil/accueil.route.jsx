@@ -17,6 +17,9 @@ export default function Accueil() {
 
   }, []);
 
+  console.log(import.meta.VITE_API_URL);
+  
+
   return (
     <div className="cardBox1 grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
       <CardAccueil 
