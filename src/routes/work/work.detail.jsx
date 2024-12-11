@@ -6,8 +6,14 @@ import axios from "axios";
 export default function WorkDetail (){
     const params = useParams();
 
+    axios.defaults.withCredentials = true;
+    const fetchdata = async() =>{
+        const url = import.meta.env.VITE_API_URL + "/work/all"
+        const result  = await axios.get(url)
+        console.log(result)
+    }
     useEffect(()=>{
-        const result  = axios.get()
+        fetchdata()
     })
     return <div>
         <Navigation nav1="work" nav2="Voteo"/>

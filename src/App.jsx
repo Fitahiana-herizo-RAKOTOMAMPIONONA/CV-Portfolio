@@ -3,6 +3,7 @@ import NavBar from './components/navbar/nav.bar'
 import { About, Accueil, Contact, Work, Service ,Credentials , WorkDetail} from './routes/export.route'
 import './App.css'
 import Footer from './components/footer/footer'
+import PostWork from './admin/post.work'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/work/:id_work' element={<WorkDetail/>}></Route>
             <Route path='/contact' element={<Contact/>}></Route>
             <Route path='/service' element={<Service/>}/>
+            <Route path='/admin/post/work' element={<PostWork/>}/>
           </Routes>
         </BrowserRouter>
       </div>
