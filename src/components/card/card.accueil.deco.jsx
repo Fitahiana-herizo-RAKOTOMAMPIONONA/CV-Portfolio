@@ -1,11 +1,12 @@
 import { useEffect } from "react"
 import { slideINleft, slideInRight, slideINtop } from "../../animation/animation"
+import { Link } from "react-router-dom";
 
 export default function CardDeco(props){
     useEffect(()=>{
         slideINleft(".card");
     },[])
-    return <a href={props.to}>
+    return <Link to={props.to}>
         <div className={`${props.className} backgroundPers w-full relative rounded-lg p-6 md:col-span-4 overflow-hidden ${props.description? "text-left`" : "text-center"}`}>
             <img src="./assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px]"/>
             <div className={props.description? "mt-14" : null}>
@@ -19,5 +20,5 @@ export default function CardDeco(props){
                 }
             </div>
         </div>
-    </a>
+    </Link>
 }

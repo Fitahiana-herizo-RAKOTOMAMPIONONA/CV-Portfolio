@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { navListe } from "../../data/route.data";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
     const [isMenuActive, setIsMenuActive] = useState(false);
@@ -60,13 +60,13 @@ export default function NavBar() {
                         >
                             {navListe.map((item, key) => (
                                 <div key={key} className={`${isMenuActive? "mt-5 mb-5 sm:mt-0 sm:mb-0" : null }`}>
-                                    <a href={item.nom !== "Accueil" ? "/" + item.nom : "/"} className="lowercase">
+                                    <Link to={item.nom !== "Accueil" ? "/" + item.nom : "/"}  className="lowercase">
                                         {item.nom}
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
-                        <a href="/contact">
+                        <Link to="/contact">
                             <div className={`backgroundPers pl-7 pr-7 pb-2 pt-2 rounded-lg sm:mt-[-10px] capitalize font-semibold ${
                                     isMenuActive
                                         ? "block text-center pt-4 pb-4 sm:pb-1"
@@ -74,7 +74,7 @@ export default function NavBar() {
                                 }`}>
                                     let's <span className="text-blue-800">talk</span> 
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

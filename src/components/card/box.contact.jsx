@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function BoxContact(props)
 {
     return <div className="flex gap-4 p-3">
@@ -9,18 +11,18 @@ export default function BoxContact(props)
             {
                 props.email1 ? <>
                     <div className="text-sm">
-                        <a href={`mailto:${props.email1}`}>{props.email1}</a>
+                        <Link to={`mailto:${props.email1}`}>{props.email1}</Link>
                     </div>
                     <div className="text-sm">
-                        <a href={`mailto:${props.email2}`}>{props.email2}</a>
+                        <Link to={`mailto:${props.email2}`}>{props.email2}</Link>
                     </div>
                 </>
                 : props.contact1 ? <>
                         <div className="text-sm">
-                            <a href={`tel:${props.contact1}`}>{props.contact1}</a>
+                            <Link to={`tel:${props.contact1}`}>{props.contact1}</Link>
                         </div>
                         <div className="text-sm">
-                            <a href={`tel:${props.contact2}`}>{props.contact2}</a>
+                            <Link to={`tel:${props.contact2}`}>{props.contact2}</Link>
                         </div>
                     </> :
                     null
