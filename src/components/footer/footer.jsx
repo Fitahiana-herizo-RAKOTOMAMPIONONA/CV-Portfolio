@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { navListe } from "../../data/route.data";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     const date = new Date
@@ -14,9 +15,9 @@ export default function Footer() {
             <div className="flex gap-6 justify-center lg:gap-10">
                 {navListe.map((item, key) => (
                     <div key={key}>
-                        <a href={item.nom !== "Accueil" ? "/" + item.nom : "/"}>
+                        <Link to={item.nom !== "Accueil" ? "/" + item.nom : "/"}>
                             {item.nom}
-                        </a>
+                        </Link>
                     </div>
                 ))}
             </div>

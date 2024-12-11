@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { BiArrowBack } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const PostWork = () => {
     const [title, setTitle] = useState("");
@@ -57,9 +58,9 @@ const PostWork = () => {
     return (
         <div className="w-full m-auto p-5">
             <div className="flex align-bottom gap-10">
-                <a className="" href="/admin/post">
+                <Link to={"/admin/post"}>
                     <BiArrowBack className="text-2xl " />
-                </a>
+                </Link>
                 <h2 className="text-xl font-semibold pt-2 pb-2">Upload Work</h2>
             </div>
             <form onSubmit={handleSubmit}>

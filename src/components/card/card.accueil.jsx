@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function CardAccueil(props) {
     return (
-        <a href={props.to} className={` block ${props.className}`}>
+        <Link to={props.to} className={` block ${props.className}`}>
             <div className="backgroundPers  text-white w-full h-auto p-5 pt-10 pb-10 rounded-2xl hover:scale-105 transition-transform duration-300 shadow-lg">
                 <div className="w-48 m-auto">
                     {
@@ -26,6 +28,6 @@ export default function CardAccueil(props) {
                     </div>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 }
