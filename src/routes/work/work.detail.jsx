@@ -1,9 +1,14 @@
 import { useParams } from "react-router-dom"
 import { Navigation, Titre, Titre2 } from "../../components/components.export";
+import { useEffect } from "react";
+import axios from "axios";
 
-export default function WorkDetail (props){
+export default function WorkDetail (){
     const params = useParams();
-    
+
+    useEffect(()=>{
+        const result  = axios.get()
+    })
     return <div>
         <Navigation nav1="work" nav2="Voteo"/>
         <Titre title="Branding for new startup"/>

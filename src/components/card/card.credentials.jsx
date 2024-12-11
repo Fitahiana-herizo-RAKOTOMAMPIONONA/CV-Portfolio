@@ -6,14 +6,14 @@ export function CredentialsComponent(props){
             {
                 props.data.map((item,key)=>{
                     return <div key={key} className="mt-4">
-                        <div className="text-lg font-semibold text-blue-800">
-                            {
-                                item.title
-                            }
-                        </div>
                         <div className="left text-sm text-gray-500">
                             {
                                 item.date
+                            }
+                        </div>
+                        <div className="text-lg font-semibold text-blue-800">
+                            {
+                                item.title
                             }
                         </div>
                         <div className="left">
