@@ -8,7 +8,7 @@ import PostWork from './admin/post.work';
 function App() {
   return (
     <BrowserRouter>
-      <div className='max-w-[1280px] pl-6 pr-6 m-auto relative'>
+      <main className='max-w-[1280px] pl-6 pr-6 m-auto relative'>
         <NavBar />
         <div className='mt-[80px] mb-10 min-h-[65vh]'>
           <Routes>
@@ -23,7 +23,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
-      </div>
+      </main>
     </BrowserRouter>
   );
 }
