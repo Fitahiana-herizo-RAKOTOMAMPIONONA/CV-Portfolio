@@ -10,7 +10,6 @@ export default function WorkDetail (){
     const fetchdata = async() =>{
         const url = import.meta.env.VITE_API_URL + "/work/all"
         const result  = await axios.get(url)
-        console.log(result)
     }
     useEffect(()=>{
         fetchdata()

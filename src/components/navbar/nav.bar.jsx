@@ -38,7 +38,7 @@ export default function NavBar() {
     }  
     xl:w-[100%]`}>
             <div
-                className="max-w-[1280px] pl-6 pr-6 m-auto relative"
+                className="maxContent pl-6 pr-6 m-auto relative"
             >
                 <div className="block relative mb-3 sm:flex justify-between pt-5 pb-1 pl-2 pr-2">
                     <img src="/ico.png" alt="" srcSet="" className="w-10 h-6 flex-2" />
