@@ -38,7 +38,7 @@ export default function NavBar() {
     }  
     xl:w-[100%]`}>
             <div
-                className="max-w-[1280px] pl-6 pr-6 m-auto relative"
+                className="maxContent pl-6 pr-6 m-auto relative"
             >
                 <div className="block relative mb-3 sm:flex justify-between pt-5 pb-1 pl-2 pr-2">
                     <img src="/ico.png" alt="" srcSet="" className="w-10 h-6 flex-2" />
@@ -50,7 +50,7 @@ export default function NavBar() {
                             {isMenuActive ? <MdClose className="text-[30px]"/> : <MdOutlineMenu className="text-[30px]"/>}
                         </div>
                     </button>
-                    <div className="block sm:flex justify-between gap-12">
+                    <div className="block sm:flex justify-between gap-7 lg:gap-12">
                         <div
                             className={`${
                                 isMenuActive

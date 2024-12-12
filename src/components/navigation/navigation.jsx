@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
 export function Navigation(props){
-    return <div className="uppercase text-sm">
+    return <div className={`uppercase text-sm ${props.className}`}>
         <Link to={`/${props.nav1}`}>
             {
                 props.nav1
             } 
         </Link>
         {"  > "}
-        <span>
+        <span className="lowercase">
             {
                 props.nav2
             } 

@@ -9,6 +9,9 @@
 .iconeSkills{
   @apply text-[40px] sm:text-[100px] m-auto;
 }
+.maxContent{
+  @apply max-w-[1200px]
+}
 
 @keyframes logo-spin {
   from {
