@@ -1,14 +1,14 @@
-import {BiRightArrowAlt } from "react-icons/bi";
+import { BiRightArrowAlt } from "react-icons/bi";
 import { Link } from "react-router-dom"
+import { LegendeDateAction } from "../box/box.blog.component";
+
 export default function CardBlog(props) {
     
     return <div className=" mt-8 mb-8 relative">
         <div className="w-full">
             <img src={props.data.cover_image} alt="" srcSet="" className="w-full" />
         </div>
-        <div className="text-blue-800 sm:mt-4 sm:mb-4 sm:p-2">
-            June 9, 23 - {props.data.title}
-        </div>
+        <LegendeDateAction data={props.data}/>
         <div className="uppercase font-semibold text-lg lg:text-2xl">
             {props.data.title}
         </div>
