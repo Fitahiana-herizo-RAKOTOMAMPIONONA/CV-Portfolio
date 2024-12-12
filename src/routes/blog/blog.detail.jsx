@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BoxSearch, CardBlog, CardBlogDetail, Titre } from "../../components/components.export";
+import { BoxSearch, CardBlog, CardBlogDetail, Navigation, Titre } from "../../components/components.export";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -41,9 +41,7 @@ export default function BlogDetail() {
 
     return (
         <div className="lg:mt-[150px]">
-            <div className="text-gray-500 text-sm">
-                HOME - {dataDetail ? dataDetail.title : 'Loading...'}
-            </div>
+            <Navigation nav1="blog" nav2={dataDetail ? dataDetail.title : 'Loading...'} className="text-gray-500 text-sm"/>
             <Titre title={dataDetail ? dataDetail.title : 'Loading...'} className={"justify-start"} />
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">
                 <div className="col-span-2">
