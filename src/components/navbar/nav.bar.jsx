@@ -50,7 +50,7 @@ export default function NavBar() {
                             {isMenuActive ? <MdClose className="text-[30px]"/> : <MdOutlineMenu className="text-[30px]"/>}
                         </div>
                     </button>
-                    <div className="block sm:flex justify-between gap-12">
+                    <div className="block sm:flex justify-between gap-7 lg:gap-12">
                         <div
                             className={`${
                                 isMenuActive

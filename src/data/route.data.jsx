@@ -14,6 +14,10 @@ const navListe = [
     },
     {
         icone : "",
+        nom : "blog",
+    },
+    {
+        icone : "",
         nom : "contact",
     },
 ]
