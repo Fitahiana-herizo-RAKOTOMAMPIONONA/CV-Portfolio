@@ -3,8 +3,8 @@ import { SiMysql, SiTailwindcss, SiTensorflow, SiTypescript } from "react-icons/
 import { FaDartLang, FaFlutter, FaNodeJs, FaPython, FaReact, FaRust, FaVuejs } from "react-icons/fa6"
 const skills =[
     {
-        icone: <FaFlutter className="iconeSkills text-blue-400"/>,
-        title: "Flutter",
+        icone: <DiJava className="iconeSkills text-red-600"/>,
+        title: "Java",
     }
     ,
     {
@@ -12,15 +12,6 @@ const skills =[
         title: "python",
     }
     ,
-    {
-        icone: <FaReact className="iconeSkills text-blue-400"/>,
-        title: "react",
-    }
-    ,
-    {
-        icone: <FaDartLang className="iconeSkills"/>,
-        title: "Dart",
-    },
     {
         icone: <DiJavascript className="iconeSkills text-yellow-300"/>,
         title: "Javascript",
@@ -30,6 +21,20 @@ const skills =[
         title: "Typescript",
     },
     {
+        icone: <FaDartLang className="iconeSkills"/>,
+        title: "Dart",
+    },
+    {
+        icone: <FaFlutter className="iconeSkills text-blue-400"/>,
+        title: "Flutter",
+    }
+    ,
+    {
+        icone: <FaReact className="iconeSkills text-blue-400"/>,
+        title: "react",
+    }
+    ,
+    {
         icone: <FaNodeJs className="iconeSkills"/>,
         title: "Nodejs",
     },
@@ -37,11 +42,6 @@ const skills =[
         icone: <SiTailwindcss className="iconeSkills text-blue-500"/>,
         title: "tailwindCSS",
     },
-    {
-        icone: <DiJava className="iconeSkills text-red-600"/>,
-        title: "Java",
-    }
-    ,
     {
         icone: <SiMysql className="iconeSkills"/>,
         title: "Mysql",

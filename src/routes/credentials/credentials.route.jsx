@@ -8,7 +8,7 @@ import { SkillsComponent } from "../../components/components.export"
 
 export default function Credentials (props){
     return <div className="grid grid-cols-1 lg:grid-cols-3">
-        <div className="backgroundPers p-6 m-auto w-full  rounded-3xl max-w-[500px]  lg:m-0 relative lg:fixed">
+        <div className="backgroundPers p-6 m-auto w-full  rounded-3xl max-w-[500px]  lg:m-0 relative h-auto">
             <img src="./assets/image/profile.jpg" alt="" className="w-full max-w-[500px] h-[200px] object-cover rounded-2xl lg:h-auto"/>
             <div className="capitalize font-semibold text-xl text-center p-2 pt-4">Herizo fitahiana</div>
             <div className="capitalize text-lg text-center text-gray-600">@Zoufitahiana</div>
