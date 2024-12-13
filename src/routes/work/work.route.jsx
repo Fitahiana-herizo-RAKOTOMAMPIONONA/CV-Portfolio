@@ -52,7 +52,7 @@ export default function Work() {
         fetchdata();
     })
     return <div>
-        <Titre title="ALL project" className={"col-span-2"} />
+        <Titre title="ALL project" className={"col-span-2 text-3xl lg:text-6xl"} />
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {
                 data.map((item,key)=>{

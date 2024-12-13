@@ -6,7 +6,7 @@ export default function About (){
         <div className="w-[300px] p-6 backgroundPers rounded-2xl m-auto row-span-1 lg:row-span-2">
             <img src="./assets/image/profile.jpg" alt="" srcSet="" className="w-full rounded-xl"/>
         </div>
-        <Titre title="Self summary" className={"lg:m-auto lg:col-span-2"}/>
+        <Titre title="Self summary" className={"lg:m-auto lg:col-span-2 text-3xl lg:text-6xl"}/>
         <CardDeco 
             title="RAKOTOMAMPIONONA FITAHIANA" 
             titleBlue ="Herizo." 
