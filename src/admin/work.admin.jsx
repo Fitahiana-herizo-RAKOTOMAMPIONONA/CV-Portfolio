@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Titre } from "../components/components.export.jsx"
 import { BiEdit } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const WorkAdmin = () => {
@@ -18,7 +19,6 @@ const WorkAdmin = () => {
         }
 
     }
-
     const handleDelete = async (e) =>{
         const url = import.meta.env.VITE_API_URL +  "/work/delete/" + e
         console.log(url);
@@ -71,7 +71,9 @@ const WorkAdmin = () => {
                             <button onClick={() => {handleDelete(item.id_work);}}>
                                 <MdDelete className="text-2xl text-red-500" />
                             </button>
-                            <BiEdit className="text-2xl" />
+                            <Link to={`/admin/work/edit/${item.id_work}`}>
+                                <BiEdit className="text-2xl" />
+                            </Link>
                         </div>
                     </div>
                 })

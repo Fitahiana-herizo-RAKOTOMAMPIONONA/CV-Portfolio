@@ -7,6 +7,7 @@ import PostWork from './admin/post.work';
 import WorkAdmin from './admin/work.admin';
 import { BoxSearch } from './components/components.export';
 import { NotFound } from './routes/notFound/notFound.route';
+import EditWork from './admin/edit.work';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path='/blog/:id_blog' element={<BlogDetail/>}/>
             <Route path='/admin/work' element={<WorkAdmin />} />
             <Route path='/admin/work/post' element={<PostWork />} />
+            <Route path='/admin/work/edit/:id' element={<EditWork />} />
             <Route path="*" element={<NotFound />} />
             
           </Routes>
