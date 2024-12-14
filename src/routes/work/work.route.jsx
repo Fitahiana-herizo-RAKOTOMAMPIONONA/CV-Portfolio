@@ -54,7 +54,6 @@ export default function Work() {
         if (!result) {
             setData(work)
         }
-        
 
     }
     useEffect(() => {

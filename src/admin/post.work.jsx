@@ -58,7 +58,7 @@ const PostWork = () => {
     return (
         <div className="w-full m-auto p-5">
             <div className="flex align-bottom gap-10">
-                <Link to={"/admin/post"}>
+                <Link to={"/admin/work"}>
                     <BiArrowBack className="text-2xl " />
                 </Link>
                 <h2 className="text-xl font-semibold pt-2 pb-2">Upload Work</h2>
