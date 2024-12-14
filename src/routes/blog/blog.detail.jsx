@@ -3,6 +3,7 @@ import { BoxSearch, CardBlog, CardBlogDetail, Navigation, Titre } from "../../co
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { CardSearchResult } from "../../components/box/box.blog.component";
+import { slideINtop } from "../../animation/animation";
 
 export default function BlogDetail() {
     const [search, setSearch] = useState("");
@@ -35,13 +36,16 @@ export default function BlogDetail() {
         fetchDataAll();
     }, [id_blog]);
 
+    useEffect(()=>{
+        slideINtop(".cardG")
+    })
 
     const filteredData = data.filter((article) =>
         article.title.toLowerCase().includes(search.toLowerCase())
     );
 
     return (
-        <div className="lg:mt-[150px]">
+        <div className="lg:mt-[150px] cardG">
             <Navigation nav1="blog" nav2={dataDetail ? dataDetail.title : 'Loading...'} className="text-gray-500 text-sm" />
             <Titre title={dataDetail ? dataDetail.title : 'Loading...'} className={"justify-start"} />
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">

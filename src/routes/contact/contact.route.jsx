@@ -3,9 +3,14 @@ import { datacontact } from "../../data/data.contact"
 import { FaFacebook } from "react-icons/fa"
 import { LiaLinkedinIn } from "react-icons/lia"
 import { BoxContact } from "../../components/components.export"
+import { slideINtop } from "../../animation/animation"
+import { useEffect } from "react"
 
 export default function Contact (props){
-    return <div className="block  gap-5 lg:flex lg:mt-[150px]">
+    useEffect(()=>{
+        slideINtop(".cardG")
+    })
+    return <div className="block  gap-5 lg:flex lg:mt-[150px] cardG">
         <div className=" p-6 rounded-2xl sm:flex-1">
             <div>
                 <div className="uppercase text-left text-sm font-semibold">

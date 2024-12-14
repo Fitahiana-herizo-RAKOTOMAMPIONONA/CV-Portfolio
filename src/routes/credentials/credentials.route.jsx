@@ -5,9 +5,14 @@ import { CredentialsComponent } from "../../components/card/card.credentials"
 import { FaFacebook } from "react-icons/fa6"
 import skills from "../../data/skills.data"
 import { SkillsComponent } from "../../components/components.export"
+import { useEffect } from "react"
+import { slideINtop } from "../../animation/animation"
 
 export default function Credentials (props){
-    return <div className="grid grid-cols-1 lg:grid-cols-3">
+    useEffect(()=>{
+        slideINtop(".cardG")
+    })
+    return <div className="grid grid-cols-1 lg:grid-cols-3 cardG">
         <div className="backgroundPers p-6 m-auto w-full  rounded-3xl max-w-[500px]  lg:m-0 relative h-auto">
             <img src="./assets/image/profile.jpg" alt="" className="w-full max-w-[500px] h-[200px] object-cover rounded-2xl lg:h-auto"/>
             <div className="capitalize font-semibold text-xl text-center p-2 pt-4">Herizo fitahiana</div>

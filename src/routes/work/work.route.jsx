@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { BoxWork, CardAccueil, CardDeco, Titre } from "../../components/components.export"
 import axios from "axios"
+import { slideINtop } from "../../animation/animation";
 
 export default function Work() {
     const [work , setWork] = useState(
@@ -51,7 +52,10 @@ export default function Work() {
     useEffect(()=>{
         fetchdata();
     })
-    return <div>
+    useEffect(()=>{
+        slideINtop(".cardG")
+    })
+    return <div className="cardG">
         <Titre title="ALL project" className={"col-span-2 text-3xl lg:text-6xl"} />
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {
