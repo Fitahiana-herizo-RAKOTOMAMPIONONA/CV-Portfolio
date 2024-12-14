@@ -38,7 +38,7 @@ export default function BlogDetail() {
 
     useEffect(()=>{
         slideINtop(".cardG")
-    })
+    },[])
 
     const filteredData = data.filter((article) =>
         article.title.toLowerCase().includes(search.toLowerCase())

@@ -6,14 +6,14 @@ import { CardAccueil ,CardDeco ,Statistique} from "../../components/components.e
 export default function Accueil() {
   useEffect(() => {
     slideINtop(".cardBox1");
-    slideINtop(".cardBox2");
-    slideINtop(".cardBox3");
-    slideINtop(".cardBox4");
-    slideINtop(".cardBox5");
-    slideINtop(".cardBox6");
-    slideINtop(".cardBox7");
-    slideINtop(".cardBox8");
-    slideINtop(".cardBox9");
+    // slideINtop(".cardBox2");
+    // slideINtop(".cardBox3");
+    // slideINtop(".cardBox4");
+    // slideINtop(".cardBox5");
+    // slideINtop(".cardBox6");
+    // slideINtop(".cardBox7");
+    // slideINtop(".cardBox8");
+    // slideINtop(".cardBox9");
 
   }, []);
 

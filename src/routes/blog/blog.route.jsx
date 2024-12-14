@@ -28,7 +28,7 @@ export default function Blog() {
     );
     useEffect(()=>{
         slideINtop(".cardG")
-    })
+    },[])
 
     return (
         <div className="lg:mt-[150px] cardG">

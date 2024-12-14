@@ -20,6 +20,25 @@ const slideINtop = (elem , delay , duratio) =>{
         },
     )
 }
+
+const slideINtopFlow = (elem , delay , duratio) =>{
+    gsap.fromTo(
+        elem,
+        {
+            opacity:0,
+            y: -40
+        },
+        {
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+                trigger: elem,
+                start: "top center",
+                end: "bottom center"
+            }
+        },
+    )
+}
 const slideINleft = (elem , delay , duratio) =>{
     gsap.fromTo(
         elem,

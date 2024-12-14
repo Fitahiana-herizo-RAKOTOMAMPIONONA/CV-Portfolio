@@ -4,7 +4,9 @@ import { About, Accueil, Contact, Work, Service, Credentials, WorkDetail, Blog, 
 import './App.css';
 import Footer from './components/footer/footer';
 import PostWork from './admin/post.work';
+import WorkAdmin from './admin/work.admin';
 import { BoxSearch } from './components/components.export';
+import { NotFound } from './routes/notFound/notFound.route';
 
 function App() {
   return (
@@ -22,7 +24,10 @@ function App() {
             <Route path='/service' element={<Service />} />
             <Route path='/blog' element={<Blog/>}/>
             <Route path='/blog/:id_blog' element={<BlogDetail/>}/>
-            <Route path='/admin/post/work' element={<PostWork />} />
+            <Route path='/admin/work' element={<WorkAdmin />} />
+            <Route path='/admin/work/post' element={<PostWork />} />
+            <Route path="*" element={<NotFound />} />
+            
           </Routes>
         </div>
         <Footer />

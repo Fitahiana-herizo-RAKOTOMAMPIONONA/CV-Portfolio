@@ -4,62 +4,70 @@ import axios from "axios"
 import { slideINtop } from "../../animation/animation";
 
 export default function Work() {
-    const [work , setWork] = useState(
+    const [work, setWork] = useState(
         [
             {
                 id: 1,
-                type : "Web designing",
-                title_work : "Dynamic", 
+                type: "Web designing",
+                title_work: "Dynamic",
                 image: "./assets/image/projet-1.jpg",
             },
             {
                 id: 2,
-                type : "Web designing",
-                title_work : "Dynamic", 
+                type: "Web designing",
+                title_work: "Dynamic",
                 image: "./assets/image/projet-2.jpg",
             },
             {
                 id: 3,
-                type : "Web designing",
-                title_work : "Dynamic", 
+                type: "Web designing",
+                title_work: "Dynamic",
                 image: "./assets/image/projet-3.jpg",
             },
             {
                 id: 4,
-                type : "Web designing",
-                title_work : "Dynamic", 
+                type: "Web designing",
+                title_work: "Dynamic",
                 image: "./assets/image/projet-1.jpg",
             },
             {
                 id: 5,
-                type : "Web designing",
-                title_work : "Dynamic", 
+                type: "Web designing",
+                title_work: "Dynamic",
                 image: "./assets/image/projet-3.jpg",
             }
         ]
     )
-    const [data , setData] = useState([]);
-
-    const fetchdata = async () =>{
-        const url = import.meta.env.VITE_API_URL + "/work/all"
-        const result = await axios.get(url)
-        if(data.length > 1)
-            setData(result.data.data);
-        else 
+    const [data, setData] = useState([]);
+    const fetchdata = async () => {
+        let result;
+        try {
+            const url = import.meta.env.VITE_API_URL + "/work/all"
+            result = await axios.get(url)
+            if (result.data.data.length > 1)
+                setData(result.data.data);
+            else
+                setData(work)
+        } catch (error) {
+            console.log(error);
+        }
+        if (!result) {
             setData(work)
-    }
+        }
+        
 
-    useEffect(()=>{
+    }
+    useEffect(() => {
         fetchdata();
-    })
-    useEffect(()=>{
+    }, [data])
+    useEffect(() => {
         slideINtop(".cardG")
-    })
+    }, [])
     return <div className="cardG">
         <Titre title="ALL project" className={"col-span-2 text-3xl lg:text-6xl"} />
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {
-                data.map((item,key)=>{
+                data.map((item, key) => {
                     return <BoxWork key={key} type={item.type || "Description indisponible"} title={item.title_work} image={item.image || "./assets/image/projet-3.jpg"} to={item.id_work} />
                 })
             }
