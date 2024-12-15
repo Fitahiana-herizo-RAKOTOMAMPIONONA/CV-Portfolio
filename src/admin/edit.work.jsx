@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BiArrowBack } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const PostWork = () => {
+const EditWork = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState(null);
     const [message, setMessage] = useState("");
+    const [data ,setData] = useState({})
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -17,24 +18,37 @@ const PostWork = () => {
             setPreview(URL.createObjectURL(selectedFile));
         }
     };
+    
+
+    const {id} = useParams();
+    const fetchData =  async() =>{
+        const url = import.meta.env.VITE_API_URL + "/work/find/" +  id
+        try {
+            const result = await axios.get(url)
+            setData(result.data.result);
+        } catch (error) {
+            console.log(error);
+            throw error
+        }
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!title || !description || !file) {
+        if (!title || !description ) {
             setMessage("All fields are required!");
             return;
         }
+        const formData ={
+            "title_work"  : title,
+            "description_work" : description
+        }
 
-        const formData = new FormData();
-        formData.append("title_work", title);
-        formData.append("description_work", description);
-        formData.append("file", file);
-
-        const url = import.meta.env.VITE_API_URL + "/work/add";
+        const url = import.meta.env.VITE_API_URL + "/work/update/" + id;
 
         try {
-            const response = await axios.post(url, formData, {
+            console.log(formData);
+            const response = await axios.put(url, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
@@ -55,6 +69,10 @@ const PostWork = () => {
         }
     };
 
+    useEffect(()=>{
+        fetchData()
+    },[])
+
     return (
         <div className="w-full m-auto p-5">
             <div className="flex align-bottom gap-10">
@@ -67,18 +85,18 @@ const PostWork = () => {
                 <div className="mb-5">
                     <input
                         type="text"
-                        value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         placeholder="Enter title"
                         className="p-2 mt-4 w-full border-red-700"
+                        defaultValue={data.title_work}
                     />
                 </div>
                 <div className="mb-10">
                     <textarea
-                        value={description}
                         onChange={(e) => setDescription(e.target.value)}
                         placeholder="Enter description"
                         className="w-full p-2 mt-1"
+                        defaultValue={data.description_work}
                     />
                 </div>
                 <div className="mb-2">
@@ -117,4 +135,4 @@ const PostWork = () => {
     );
 };
 
-export default PostWork;
+export default EditWork;

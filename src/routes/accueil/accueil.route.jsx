@@ -1,24 +1,23 @@
 import { useEffect } from "react";
-import { slideINtop } from "../../animation/animation.js";
+import { slideINtop, slideINtopSlow } from "../../animation/animation.js";
 import { CardAccueil ,CardDeco ,Statistique} from "../../components/components.export.jsx";
 
 
 export default function Accueil() {
   useEffect(() => {
     slideINtop(".cardBox1");
-    slideINtop(".cardBox2");
-    slideINtop(".cardBox3");
-    slideINtop(".cardBox4");
-    slideINtop(".cardBox5");
-    slideINtop(".cardBox6");
-    slideINtop(".cardBox7");
-    slideINtop(".cardBox8");
-    slideINtop(".cardBox9");
-
+    slideINtopSlow(".cardBox2");
+    slideINtopSlow(".cardBox3");
+    slideINtopSlow(".cardBox4");
+    slideINtopSlow(".cardBox5");
+    slideINtopSlow(".cardBox6");
+    slideINtopSlow(".cardBox7");
+    slideINtopSlow(".cardBox8");
+    slideINtopSlow(".cardBox9");
   }, []);
 
   return (
-    <div className="cardBox1 grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+    <div className="cardBox1 grid grid-cols-1 md:grid-cols-3 gap-8 ">
       <CardAccueil 
         description="AN DEVELOPER" 
         title="Herizo RAKOTOMAMPIONONA." 

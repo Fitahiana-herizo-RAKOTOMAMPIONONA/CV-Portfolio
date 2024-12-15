@@ -4,14 +4,17 @@ import { About, Accueil, Contact, Work, Service, Credentials, WorkDetail, Blog, 
 import './App.css';
 import Footer from './components/footer/footer';
 import PostWork from './admin/post.work';
+import WorkAdmin from './admin/work.admin';
 import { BoxSearch } from './components/components.export';
+import { NotFound } from './routes/notFound/notFound.route';
+import EditWork from './admin/edit.work';
 
 function App() {
   return (
     <BrowserRouter>
       <main className='maxContent pl-6 pr-6 m-auto relative'>
         <NavBar />
-        <div className='mt-[80px] mb-10 min-h-[65vh]'>
+        <div className='mt-[80px] mb-10 min-h-[65vh] p-6'>
           <Routes>
             <Route path='/' element={<Accueil />} />
             <Route path='/About' element={<About />} />
@@ -22,7 +25,11 @@ function App() {
             <Route path='/service' element={<Service />} />
             <Route path='/blog' element={<Blog/>}/>
             <Route path='/blog/:id_blog' element={<BlogDetail/>}/>
-            <Route path='/admin/post/work' element={<PostWork />} />
+            <Route path='/admin/work' element={<WorkAdmin />} />
+            <Route path='/admin/work/post' element={<PostWork />} />
+            <Route path='/admin/work/edit/:id' element={<EditWork />} />
+            <Route path="*" element={<NotFound />} />
+            
           </Routes>
         </div>
         <Footer />

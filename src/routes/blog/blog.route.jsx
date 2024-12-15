@@ -3,6 +3,7 @@ import { BoxSearch, CardBlog, Titre } from "../../components/components.export";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { CardSearchResult } from "../../components/box/box.blog.component";
+import { slideINtop } from "../../animation/animation";
 
 export default function Blog() {
     const [search, setSearch] = useState("");
@@ -25,9 +26,12 @@ export default function Blog() {
     const filteredData = data.filter((article) =>
         article.title.toLowerCase().includes(search.toLowerCase())
     );
+    useEffect(()=>{
+        slideINtop(".cardG")
+    },[])
 
     return (
-        <div className="lg:mt-[150px]">
+        <div className="lg:mt-[150px] cardG">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">
                 <div className="col-span-2">
                     {filteredData.length < 1

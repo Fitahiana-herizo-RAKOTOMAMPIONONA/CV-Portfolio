@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { Navigation, Titre, Titre2 } from "../../components/components.export";
 import { useEffect } from "react";
 import axios from "axios";
+import { slideINtop } from "../../animation/animation";
 
 export default function WorkDetail (){
     const params = useParams();
@@ -14,7 +15,10 @@ export default function WorkDetail (){
     useEffect(()=>{
         fetchdata()
     })
-    return <div>
+    useEffect(()=>{
+        slideINtop(".cardG")
+    })
+    return <div className="cardG">
         <Navigation nav1="work" nav2="Voteo"/>
         <Titre title="Branding for new startup"/>
         <div>

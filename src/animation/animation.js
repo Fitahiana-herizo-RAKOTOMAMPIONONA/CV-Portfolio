@@ -20,6 +20,26 @@ const slideINtop = (elem , delay , duratio) =>{
         },
     )
 }
+
+const slideINtopSlow = (elem , delay , duratio) =>{
+    gsap.fromTo(
+        elem,
+        {
+            opacity:0,
+            y: -80
+        },
+        {
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+                trigger: elem,
+                start: "top 75%",
+                end: "bottom center",
+                // scrub: true,
+            }
+        },
+    )
+}
 const slideINleft = (elem , delay , duratio) =>{
     gsap.fromTo(
         elem,
@@ -71,4 +91,4 @@ const undeux = (elem , delay , duratio) =>{
         }
     )
 }
-export {slideINleft, slideINtop,undeux ,slideInRight}
+export {slideINleft, slideINtop,undeux ,slideInRight , slideINtopSlow}
