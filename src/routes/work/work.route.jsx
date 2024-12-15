@@ -4,61 +4,26 @@ import axios from "axios"
 import { slideINtop } from "../../animation/animation";
 
 export default function Work() {
-    const [work, setWork] = useState(
-        [
-            {
-                id: 1,
-                type: "Web designing",
-                title_work: "Dynamic",
-                image: "./assets/image/projet-1.jpg",
-            },
-            {
-                id: 2,
-                type: "Web designing",
-                title_work: "Dynamic",
-                image: "./assets/image/projet-2.jpg",
-            },
-            {
-                id: 3,
-                type: "Web designing",
-                title_work: "Dynamic",
-                image: "./assets/image/projet-3.jpg",
-            },
-            {
-                id: 4,
-                type: "Web designing",
-                title_work: "Dynamic",
-                image: "./assets/image/projet-1.jpg",
-            },
-            {
-                id: 5,
-                type: "Web designing",
-                title_work: "Dynamic",
-                image: "./assets/image/projet-3.jpg",
-            }
-        ]
-    )
+    const api_url = import.meta.env.VITE_API_URL
+    const [load,setLoad] = useState(false)
     const [data, setData] = useState([]);
     const fetchdata = async () => {
         let result;
         try {
             const url = import.meta.env.VITE_API_URL + "/work/all"
             result = await axios.get(url)
-            if (result.data.data.length > 1)
+            if (result.data.data.length > 0)
+            {
                 setData(result.data.data);
-            else
-                setData(work)
+                setLoad(true)
+            }
         } catch (error) {
             console.log(error);
         }
-        if (!result) {
-            setData(work)
-        }
-
     }
     useEffect(() => {
         fetchdata();
-    }, [data])
+    }, [])
     useEffect(() => {
         slideINtop(".cardG")
     }, [])
@@ -66,8 +31,23 @@ export default function Work() {
         <Titre title="ALL project" className={"col-span-2 text-3xl lg:text-6xl"} />
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {
+                load == true?
                 data.map((item, key) => {
-                    return <BoxWork key={key} type={item.type || "Description indisponible"} title={item.title_work} image={item.image || "./assets/image/projet-3.jpg"} to={item.id_work} />
+                    return <BoxWork key={key} type={item.type || "Description indisponible"} title={item.title_work} image={api_url+item.file_url || "./assets/image/projet-3.jpg"} to={item.id_work} />
+                })
+                :
+                Array.from({ length: 4 }).map((_, index) => {
+                    return (
+                        <div
+                            key={index}
+                            className="mt-8 mb-8 relative animate-pulse"
+                        >
+                            <div className="w-full bg-gray-300 h-48 rounded-lg sm:w-full dark:bg-gray-700"></div>
+                            <div className="text-blue-800 sm:mt-4 sm:mb-4 sm:p-2 h-6 bg-gray-200 rounded-full dark:bg-gray-700 w-3/4"></div>
+                            <div className="uppercase font-semibold text-lg lg:text-2xl h-8 bg-gray-200 rounded-full dark:bg-gray-700 w-2/3"></div>
+                            <div className="mt-4 w-[200px] h-10 bg-gray-300 rounded-full dark:bg-gray-700"></div>
+                        </div>
+                    );
                 })
             }
             <CardAccueil
