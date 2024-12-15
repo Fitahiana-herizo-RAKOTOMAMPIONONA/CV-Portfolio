@@ -39,11 +39,6 @@ const EditWork = () => {
             setMessage("All fields are required!");
             return;
         }
-
-        // const formData = new FormData();
-        // formData.append("title_work", title);
-        // formData.append("description_work", description);
-        // // formData.append("file", file);
         const formData ={
             "title_work"  : title,
             "description_work" : description

@@ -21,7 +21,7 @@ const slideINtop = (elem , delay , duratio) =>{
     )
 }
 
-const slideINtopFlow = (elem , delay , duratio) =>{
+const slideINtopSlow = (elem , delay , duratio) =>{
     gsap.fromTo(
         elem,
         {
@@ -90,4 +90,4 @@ const undeux = (elem , delay , duratio) =>{
         }
     )
 }
-export {slideINleft, slideINtop,undeux ,slideInRight}
+export {slideINleft, slideINtop,undeux ,slideInRight , slideINtopSlow}

@@ -6,7 +6,7 @@ export default function CardDeco(props){
     useEffect(()=>{
         slideINleft(".card");
     },[])
-    return <Link to={props.to} className={`hover:scale-105 transition-transform duration-300 no-underline decoration-inherit ${props.className2}`}>
+    return <Link to={props.to} className={`card hover:scale-105 transition-transform duration-300 no-underline decoration-inherit ${props.className2}`}>
         <div className={`${props.className} backgroundPers w-full relative rounded-lg p-6 md:col-span-4 overflow-hidden ${props.description? "text-left`" : "text-center"}`}>
             <img src="./assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px]"/>
             <div className={props.description? "mt-14" : null}>
