@@ -26,15 +26,16 @@ const slideINtopSlow = (elem , delay , duratio) =>{
         elem,
         {
             opacity:0,
-            y: -40
+            y: -80
         },
         {
             opacity: 1,
             y: 0,
             scrollTrigger: {
                 trigger: elem,
-                start: "top center",
-                end: "bottom center"
+                start: "top 75%",
+                end: "bottom center",
+                // scrub: true,
             }
         },
     )
