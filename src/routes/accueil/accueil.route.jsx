@@ -47,10 +47,11 @@ export default function Accueil() {
       />
       
       <CardAccueil
-        description="AN DEVELOPER" 
+        description="BLOG" 
         title="gFonts"
         image="./assets/image/gfonts.png"
         className="cardBox6"
+        to="/blog"
       />
   
       <CardAccueil
