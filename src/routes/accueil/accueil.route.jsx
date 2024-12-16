@@ -21,18 +21,20 @@ export default function Accueil() {
       <CardAccueil 
         description="AN DEVELOPER" 
         title="Herizo RAKOTOMAMPIONONA." 
-        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cum aut beatae"
+        message="Étudiant en IMTICIA à l’ISPM, je suis une personne rigoureuse, curieuse et passionnée  par des nouvelles technologie informatique ..."
         image="./assets/image/profile.jpg"
         to="/about"
         className="row-span-2 md:col-span-1 cardBox2"
       />
-      <div className="cardBox3 backgroundPers text-sm p-5 rounded-2xl max-h-[70px] md:col-span-2 flex items-center justify-center">
-        Lorem ipsum, dolor sit amet consectetur
+      <div className="cardBox3 backgroundPers text-sm p-5 rounded-2xl max-h-[70px] md:col-span-2 text-center inline-block animate-marquee">
+        Salut .c'est herizo
+        Salut .c'est herizo
+        Salut .c'est herizo
       </div>
 
       <CardAccueil
-        description="MORE ABOUT ME" 
-        title="Credentials" 
+        description="Plus sur moi" 
+        title="certification" 
         image="./assets/image/sign.png"
         className="cardBox4"
         to="/credentials"
@@ -40,34 +42,35 @@ export default function Accueil() {
 
       <CardAccueil
         description="SHOWCASE" 
-        title="Projects" 
+        title="Projets" 
         image="./assets/image/my-works.png"
         className="cardBox5"
         to="/work"
       />
       
       <CardAccueil
-        description="AN DEVELOPER" 
+        description="BLOG" 
         title="gFonts"
         image="./assets/image/gfonts.png"
         className="cardBox6"
+        to="/blog"
       />
   
       <CardAccueil
         description="Specialisation" 
-        title="Service offering" 
+        title="Service offerte" 
         image="./assets/image/my-works.png"
         to="/service"
         className="cardBox7"
       />
       <CardAccueil
-        description="MORE" 
-        title="Contact me."
+        description="POUR PLUS" 
+        title="Contactez-moi."
         className="cardBox8"
         to="/Contact"
       />
       <Statistique/>
-      <CardDeco title="Let's work" titleBlue="together." to="/contact" className={"md*:col-span-3"}/>
+      <CardDeco title="Collaborons" titleBlue="ensemble." to="/contact" className={"md*:col-span-3"}/>
     </div>
   );  
 }

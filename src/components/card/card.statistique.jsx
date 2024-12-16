@@ -1,17 +1,17 @@
 export default function Statistique(props){
     const statistique = [
       {
-        "number": 7,
-        "description" : "Years Experience"
+        "number": 2,
+        "description" : "Ans d'experience"
       }
       ,
       {
-        "number": "+125",
-        "description" : "Clients Worldwide"
+        "number": "+12",
+        "description" : "Clients"
       }, 
       {
-        "number": "+210",
-        "description" : "Projects"
+        "number": "+23",
+        "description" : "Projets"
       }
     ]
     return <div className="cardBox9 backgroundPers rounded-lg p-6 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">

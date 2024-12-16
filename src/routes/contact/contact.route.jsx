@@ -40,7 +40,7 @@ export default function Contact (props){
             </div>
         </div>
         <div className="relative overflow-hidden backgroundPers p-6 rounded-2xl sm:flex-1">
-            <img src="./assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px] right-3"/>
+            <img src="/assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px] right-3"/>
             <h2 className="text-2xl font-bold mb-4 mt-4">Let's work <span className="text-blue-800">together.</span></h2>
             <div className="block gap-3">
                 <input type="text" name="" id="" className="w-full p-3 rounded-lg  mt-2 mb-2" placeholder="Votre nom"/>
