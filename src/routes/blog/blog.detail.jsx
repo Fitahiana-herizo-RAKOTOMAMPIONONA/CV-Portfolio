@@ -48,7 +48,7 @@ export default function BlogDetail() {
         <div className="lg:mt-[150px] cardG">
             <Navigation nav1="blog" nav2={dataDetail ? dataDetail.title : 'Loading...'} className="text-gray-500 text-sm" />
             <Titre title={dataDetail ? dataDetail.title : 'Loading...'} className={"justify-start"} />
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">
+            <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-[60px] w-full">
                 <div className="col-span-2">
                     {dataDetail ? (
                         <CardBlogDetail data={dataDetail} />

@@ -12,7 +12,8 @@ const CardSearchResult = (props) => {
     const { search, setSearch, filteredData } = props;
 
     return (
-        <div className="col-span-1 w-full sm:w-full">
+        // <div className="col-span-1 w-full sm:w-full">
+        <div className="col-span-1 w-full sm:w-full flex flex-col">
             <div className="rounded-full backgroundPers p-3 mt-2 mb-2 pl-8 flex items-center w-full relative">
                 <input
                     type="text"
