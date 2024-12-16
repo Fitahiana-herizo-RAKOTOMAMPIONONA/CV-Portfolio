@@ -3,7 +3,7 @@ import Titre2 from "../titre/titre.text2"
 export default function CardExperience(props) {
     return (
         <div className={`w-full backgroundPers p-6 rounded-2xl ${props.className}`}>
-            <Titre2 title={props.title} />
+            <Titre2 title={props.title} className="capitalize" />
             { 
                 props.data.map((item,key)=>{
                     return <div key={key} className="mt-4">

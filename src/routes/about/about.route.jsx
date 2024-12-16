@@ -4,7 +4,7 @@ import { CardAccueil, CardDeco, CardExperience, Titre } from "../../components/c
 import { experience, formation } from "../../data/data.experience.jsx"
 
 export default function About() {
-    useEffect(()=>{
+    useEffect(() => {
         slideINtop(".cardG")
     })
     return <div className="grid gap-3 grid-cols-1 lg:grid-cols-3 cardG">
@@ -15,29 +15,34 @@ export default function About() {
         <CardDeco
             title="RAKOTOMAMPIONONA FITAHIANA"
             titleBlue="Herizo."
-            description="un etudiant qui suit la mention informatique au sein de l'ISPM un etudiant qui suit la mention informatique au sein de l'ISPM"
+            description="Étudiant en IMTICIA à l’ISPM, je suis une personne rigoureuse, 
+            curieuse et passionnée par des nouvelles technologie informatique et ainsi les technologies de l’information et de la communication, 
+            avec une forte capacité d’adaptation et une volonté constante d’apprendre et d’innover 
+            dans le domaine du numérique."
             className2="lg:col-span-2"
         />
         <div className="sm:flex  gap-3 lg:col-span-3">
             <CardExperience title="experience" data={experience} />
             <CardExperience title="formation" data={formation} className="mt-3" />
         </div>
-        <CardDeco title="Let's work" titleBlue="together." to="/contact" className2="lg:col-span-3" />
+        <CardDeco title="Pret a contribuer a votre" titleBlue="succes." to="/contact" className2="lg:col-span-3" />
         <CardAccueil
-            description="MORE ABOUT ME"
-            title="Credentials"
+            description="PLUS SUR MOI"
+            title="certification"
             image="./assets/image/sign.png"
+            className="cardBox4"
             to="/credentials"
         />
         <CardAccueil
-            description="AN DEVELOPER"
+            description="BLOG"
             title="gFonts"
             image="./assets/image/gfonts.png"
             className="cardBox6"
+            to="/blog"
         />
         <CardAccueil
             description="SHOWCASE"
-            title="Projects"
+            title="Projets"
             image="./assets/image/my-works.png"
             className="cardBox5"
             to="/work"
