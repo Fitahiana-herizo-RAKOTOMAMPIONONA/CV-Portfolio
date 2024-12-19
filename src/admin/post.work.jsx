@@ -7,6 +7,7 @@ const PostWork = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [file, setFile] = useState(null);
+    const [type, setType] = useState(null);
     const [preview, setPreview] = useState(null);
     const [message, setMessage] = useState("");
 
@@ -30,6 +31,7 @@ const PostWork = () => {
         formData.append("title_work", title);
         formData.append("description_work", description);
         formData.append("file", file);
+        formData.append("type", type);
 
         const url = import.meta.env.VITE_API_URL + "/work/add";
 
@@ -70,6 +72,15 @@ const PostWork = () => {
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         placeholder="Enter title"
+                        className="p-2 mt-4 w-full border-red-700"
+                    />
+                </div>
+                <div className="mb-5">
+                    <input
+                        type="text"
+                        value={type}
+                        onChange={(e) => setType(e.target.value)}
+                        placeholder="type"
                         className="p-2 mt-4 w-full border-red-700"
                     />
                 </div>

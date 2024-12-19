@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@material-tailwind/react": "^2.1.10",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "gsap": "^3.12.5",
