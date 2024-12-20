@@ -6,8 +6,15 @@ import { Link } from "react-router-dom";
 const PostWork = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [file, setFile] = useState(null);
-    const [type, setType] = useState(null);
+    const [file, setFile] = useState("");
+    const [type, setType] = useState("");
+    const [date, setDate] = useState("");
+    const [status, setStatus] = useState("");
+    const [progress, setProgress] = useState(0);
+    const [technologies_used, setTechnologies_used] = useState(0);
+    const [client_name, setClient_name] = useState("");
+    
+
     const [preview, setPreview] = useState(null);
     const [message, setMessage] = useState("");
 
@@ -32,10 +39,17 @@ const PostWork = () => {
         formData.append("description_work", description);
         formData.append("file", file);
         formData.append("type", type);
+        formData.append("date", date);
+        formData.append("progress", progress);
+        formData.append("technologies_used", technologies_used);
+        formData.append("client_name", client_name);
+        // formData.append("status", status);        
 
         const url = import.meta.env.VITE_API_URL + "/work/add";
 
         try {
+            console.log(formData);
+            
             const response = await axios.post(url, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
@@ -48,6 +62,7 @@ const PostWork = () => {
                 setPreview(null);
                 setTitle("");
                 setDescription("");
+                setDate("");
             } else {
                 setMessage("Failed to upload work.");
             }
@@ -82,6 +97,55 @@ const PostWork = () => {
                         onChange={(e) => setType(e.target.value)}
                         placeholder="type"
                         className="p-2 mt-4 w-full border-red-700"
+                    />
+                </div>
+                <div className="mb-5">
+                    <input
+                        type="text"
+                        value={client_name}
+                        onChange={(e) => setClient_name(e.target.value)}
+                        placeholder="client"
+                        className="p-2 mt-4 w-full border-red-700"
+                    />
+                </div>
+                <div className="mb-5">
+                    <label htmlFor="date" className="text-gray-700">date debut</label>
+                    <input
+                        id="date"
+                        type="date"
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)}
+                        placeholder="Date du projet"
+                        className="p-2 mt-4 w-full border-red-700"
+                    />
+                </div>
+                <div className="mb-5">
+                <label htmlFor="text" className="text-gray-700">progress</label>
+                    <input
+                        id="text"
+                        type="number"
+                        value={progress}
+                        onChange={(e) => setProgress(e.target.value)}
+                        placeholder="Date du projet"
+                        className="p-2 mt-4 w-full border-red-700"
+                    />
+                </div>
+                <div className="mb-5">
+                    <select name="status" value={"en cours"} id="" className="w-full p-2 bg-transparent capitalize" onChange={(e)=> console.log()}>
+                        <option value="en cours">
+                            en cours
+                        </option>
+                        <option value="fini">
+                            Fini
+                        </option>
+                    </select>
+                </div>
+                <div className="mb-10">
+                    <textarea
+                        value={technologies_used}
+                        onChange={(e) => setTechnologies_used(e.target.value)}
+                        placeholder="Enter description"
+                        className="w-full p-2 mt-1"
                     />
                 </div>
                 <div className="mb-10">
