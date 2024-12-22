@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { BoxSearch, CardBlog, CardBlogDetail, Navigation, Titre } from "../../components/components.export";
-import { Link, useParams } from "react-router-dom";
+import { CardBlogDetail, Navigation, Titre } from "../../components/components.export";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { CardSearchResult } from "../../components/box/box.blog.component";
 import { slideINtop } from "../../animation/animation";

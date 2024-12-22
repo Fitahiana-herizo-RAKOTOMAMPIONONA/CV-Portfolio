@@ -1,3 +1,5 @@
+import { Carousel } from "@material-tailwind/react"
+
 export const NotFound = () => {
     return <div className="m-auto text-center lg:mt-[200px]">
         <div className="text-6xl"><span className="text-red-800">404</span> - TSA HITA </div>
@@ -7,19 +9,19 @@ export const NotFound = () => {
         <div id="default-carousel" class="relative w-full" data-carousel="slide">
             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    <img src="/assets/image/gfonts.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                 </div>
             </div>
             <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -46,5 +48,36 @@ export const NotFound = () => {
                 </span>
             </button>
         </div>
+        <Carousel
+            className="rounded-xl"
+            navigation={({ setActiveIndex, activeIndex, length }) => (
+                <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                    {new Array(length).fill("").map((_, i) => (
+                        <span
+                            key={i}
+                            className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                                }`}
+                            onClick={() => setActiveIndex(i)}
+                        />
+                    ))}
+                </div>
+            )}
+        >
+            <img
+                src="/assets/image/gfonts.png"
+                alt="image 1"
+                className="h-full w-full object-cover"
+            />
+            <img
+                src="/assets/image/gfonts.png"
+                alt="image 2"
+                className="h-full w-full object-cover"
+            />
+            <img
+                src="/assets/image/gfonts.png"
+                alt="image 3"
+                className="h-full w-full object-cover"
+            />
+        </Carousel>
     </div>
 }
