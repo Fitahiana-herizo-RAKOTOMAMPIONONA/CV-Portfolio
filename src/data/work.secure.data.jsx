@@ -20,7 +20,7 @@ const WorkData = [
         "remarks": null,
         "is_archived": 0,
         "visibility": "public",
-        "technologies_used": "52",
+        "technologies_used": ["ReactJS" , "Css", "cd"],
         "rating": null
       },
       {
@@ -42,7 +42,7 @@ const WorkData = [
         "remarks": null,
         "is_archived": 0,
         "visibility": "public",
-        "technologies_used": "52",
+        "technologies_used": ["ReactJS" , "Css", "cd"],
         "rating": null
       },
       {
@@ -64,7 +64,7 @@ const WorkData = [
         "remarks": null,
         "is_archived": 0,
         "visibility": "public",
-        "technologies_used": "52",
+        "technologies_used": ["ReactJS" , "Css", "cd"],
         "rating": null
       },
       {
@@ -86,7 +86,7 @@ const WorkData = [
         "remarks": null,
         "is_archived": 0,
         "visibility": "public",
-        "technologies_used": "52",
+        "technologies_used": ["ReactJS" , "Css", "cd"],
         "rating": null
       },
       {
@@ -108,7 +108,7 @@ const WorkData = [
         "remarks": null,
         "is_archived": 0,
         "visibility": "public",
-        "technologies_used": "52",
+        "technologies_used": ["ReactJS" , "Css", "cd"],
         "rating": null
       },
       {
@@ -130,7 +130,7 @@ const WorkData = [
         "remarks": null,
         "is_archived": 0,
         "visibility": "public",
-        "technologies_used": "52",
+        "technologies_used": ["ReactJS" , "Css", "cd"],
         "rating": null
       },
 ]
