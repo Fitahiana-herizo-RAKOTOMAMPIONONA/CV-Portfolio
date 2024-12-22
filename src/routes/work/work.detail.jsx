@@ -39,7 +39,7 @@ export default function WorkDetail() {
 
     return <div className="cardG">
         <Navigation nav1="work" nav2={load ? data.title_work : "Indisponible"} />
-        <Titre title={load ? data.title_work : "Indisponible"} className={"text-2xl lg:text-3xl"}/>
+        <Titre title={load ? data.title_work : "Indisponible"} className={"text-2xl lg:text-3xl"} />
         <div>
             <img src={load ? `${url}${data.file_url}` : null} alt="" className="w-full max-h-[400px] object-cover object-top" />
         </div>
@@ -58,6 +58,18 @@ export default function WorkDetail() {
                 <div className="pt-2 pb-2">
                     {
                         load ? data.description_work : "chargement ... "
+                    }
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                    {
+                        load ?
+                            data.technologies_used.map((i, k) => {
+                                return <div key={k} className="bg-blue-800 p-1 pl-3 pr-3 rounded-xl text-xs lg:text-sn">
+                                    #{i}
+                                </div>
+                            })
+                            :
+                            null
                     }
                 </div>
             </div>

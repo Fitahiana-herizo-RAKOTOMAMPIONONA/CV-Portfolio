@@ -10,7 +10,7 @@ export default function Contact (props){
     useEffect(()=>{
         slideINtop(".cardG")
     })
-    return <div className="block  gap-5 lg:flex lg:mt-[150px] cardG">
+    return <div className="block  gap-5 lg:flex lg:mt-[100px] cardG">
         <div className=" p-6 rounded-2xl sm:flex-1">
             <div>
                 <div className="uppercase text-left text-sm font-semibold">

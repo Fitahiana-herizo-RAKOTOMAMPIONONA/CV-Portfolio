@@ -22,7 +22,7 @@ export default function CardBlogDetail(props) {
             <div className="mt-4 text-gray-500 text-sm">
                 <div className="flex justify-between">
                     <div className="text-blue-600">
-                        Author: <Link to={`/profile/${props.data.user.username}`} className="underline">{props.data.user.username}</Link>
+                        Author: <Link to={`/profile/${props.data.user.username}`} className="">{props.data.user.username}</Link>
                     </div>
                     <div>{props.data ? props.data.readable_publish_date : 'Loading...'}</div>
                 </div>

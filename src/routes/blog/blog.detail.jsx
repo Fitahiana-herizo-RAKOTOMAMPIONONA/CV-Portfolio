@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { BoxSearch, CardBlog, CardBlogDetail, Navigation, Titre } from "../../components/components.export";
-import { Link, useParams } from "react-router-dom";
+import { CardBlogDetail, Navigation, Titre } from "../../components/components.export";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { CardSearchResult } from "../../components/box/box.blog.component";
 import { slideINtop } from "../../animation/animation";
@@ -45,10 +45,10 @@ export default function BlogDetail() {
     );
 
     return (
-        <div className="lg:mt-[150px] cardG">
+        <div className="lg:mt-[100px] cardG">
             <Navigation nav1="blog" nav2={dataDetail ? dataDetail.title : 'Loading...'} className="text-gray-500 text-sm" />
             <Titre title={dataDetail ? dataDetail.title : 'Loading...'} className={"justify-start"} />
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">
+            <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-[60px] w-full">
                 <div className="col-span-2">
                     {dataDetail ? (
                         <CardBlogDetail data={dataDetail} />
