@@ -13,7 +13,6 @@ export default function Work() {
         try {
             const url = import.meta.env.VITE_API_URL + "/work/all"
             result = await axios.get(url)
-            console.log(result.code);
             if (result.data.data.length > 0) {
                 setData(result.data.data);
                 setLoad(true)
@@ -23,8 +22,6 @@ export default function Work() {
             setData(WorkData);
         }
     }
-
-    console.log(data);
     
     
     useEffect(() => {
@@ -37,9 +34,9 @@ export default function Work() {
         <Titre title="Tous les projets" className={"col-span-2 text-3xl lg:text-6xl"} />
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {
-                load == true ?
+                load == true || data.length > 0?
                     data.map((item, key) => {
-                        return <BoxWork key={key} type={item.type || "Description indisponible"} title={item.title_work} image={api_url + item.file_url || "./assets/image/projet-3.jpg"} to={item.id_work} />
+                        return <BoxWork key={key} type={item.type || "Description indisponible"} title={item.title_work} image={load ? api_url + item.file_url : item.file_url} to={load ?  item.id_work : key} />
                     })
                     :
                     Array.from({ length: 4 }).map((_, index) => {

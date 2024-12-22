@@ -4,33 +4,52 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { slideINtop } from "../../animation/animation";
 import { BsSendArrowUp } from "react-icons/bs";
+import { WorkData } from "../../data/work.secure.data";
 
 export default function WorkDetail() {
     const url = import.meta.env.VITE_API_URL
     const { id_work } = useParams();
     const [data, setData] = useState()
     const [comment, setComment] = useState([])
+    const [error ,setError] = useState(data == undefined)
     const [load, setLoad] = useState(false)
 
     const fetchdata = async () => {
-        const url = import.meta.env.VITE_API_URL + "/work/find/" + id_work
-        const result = await axios.get(url)
-        console.log();
-        if (result.data.result && result.status == 200) {
-            setData(result.data.result)
-            setLoad(true)
+        try {
+            const url = import.meta.env.VITE_API_URL + "/work/find/" + id_work
+            const result = await axios.get(url)
+            console.log();
+            if (result.data.result && result.status == 200) {
+                setData(result.data.result)
+                setLoad(true)
+            }
         }
+        catch (error) {
+            console.log(error);
+            setData(WorkData[id_work])
+        }
+
     }
+    
 
     const constFetchComment = async () => {
         const url = import.meta.env.VITE_API_URL + "/comment/all"
-        const result = await axios.get(url)
-        console.log();
-        if (result.data.result && result.status == 200) {
-            setComment(result.data.result)
+        try {
+            const result = await axios.get(url)
+            console.log();
+            if (result.data.result && result.status == 200) {
+                setComment(result.data.result)
+            }
+        } catch (error) {
+            console.log(error);
         }
     }
 
+    useEffect(()=>{
+        setError(data == undefined)
+    },[data])
+    
+    
     useEffect(() => {
         fetchdata()
         constFetchComment()
@@ -38,10 +57,11 @@ export default function WorkDetail() {
     }, [])
 
     return <div className="cardG">
-        <Navigation nav1="work" nav2={load ? data.title_work : "Indisponible"} />
-        <Titre title={load ? data.title_work : "Indisponible"} className={"text-2xl lg:text-3xl"} />
+        <Navigation nav1="work" nav2={load ? data.title_work :  (!error? data.title_work : "null")} />
+        <Titre title={error? "chargement ... ": data.title_work} className={"text-2xl lg:text-3xl"} />
         <div>
-            <img src={load ? `${url}${data.file_url}` : null} alt="" className="w-full max-h-[400px] object-cover object-top" />
+        {load ? `${url}${data.file_url}` : null}
+            <img src={load ? `${url}${data.file_url}` : (!error? data.file_url : null)} alt="" className="w-full max-h-[400px] object-cover object-top" />
         </div>
         <div className=" rounded-xl sm:rounded-3xl grid lg:grid-cols-2 bg-transparent backgroundPers relative overflow-hidden mt-10 p-4 lg:p-10">
             <img src="/assets/image/icon2.png" alt="" srcSet="" className="absolute top-[-15px] right-14" />
@@ -62,7 +82,7 @@ export default function WorkDetail() {
                 </div>
                 <div className="flex gap-2 flex-wrap">
                     {
-                        load ?
+                        load && data.technologies_used != null ?
                             data.technologies_used.map((i, k) => {
                                 return <div key={k} className="bg-blue-800 p-1 pl-3 pr-3 rounded-xl text-xs lg:text-sn">
                                     #{i}
