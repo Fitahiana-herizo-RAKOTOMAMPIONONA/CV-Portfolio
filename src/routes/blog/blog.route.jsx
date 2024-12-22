@@ -31,7 +31,7 @@ export default function Blog() {
     },[])
 
     return (
-        <div className="lg:mt-[100px] cardG">
+        <div className="lg:mt-[50px] cardG">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">
                 <div className="col-span-2">
                     {filteredData.length < 1

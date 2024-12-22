@@ -68,7 +68,7 @@ const PostWork = () => {
             }
         } catch (error) {
             console.error("Error uploading work:", error);
-            setMessage("An error occurred while uploading the work.");
+            setMessage("An error occurred while uploading the work."+ error);
         }
     };
 
