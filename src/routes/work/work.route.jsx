@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { BoxWork, CardAccueil, CardDeco, Titre } from "../../components/components.export"
 import axios from "axios"
 import { slideINtop } from "../../animation/animation";
+import { WorkData } from "../../data/work.secure.data";
 
 export default function Work() {
     const api_url = import.meta.env.VITE_API_URL
@@ -12,14 +13,20 @@ export default function Work() {
         try {
             const url = import.meta.env.VITE_API_URL + "/work/all"
             result = await axios.get(url)
+            console.log(result.code);
             if (result.data.data.length > 0) {
                 setData(result.data.data);
                 setLoad(true)
             }
         } catch (error) {
             console.log(error);
+            setData(WorkData);
         }
     }
+
+    console.log(data);
+    
+    
     useEffect(() => {
         fetchdata();
     }, [])
