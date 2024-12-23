@@ -64,7 +64,7 @@ const WorkData = [
       "Application mobile de chat en temps réel avec traduction multilingue, supportant actuellement l'anglais, le français et le malgache.",
     date: "2024-01-15",
     type: "mobile",
-    file_url: "/assets/image/chat-traductor.png",
+    file_url: "",
     slide_image_urls: [
       "/assets/slides/chat-traductor-slide-1.png",
       "/assets/slides/chat-traductor-slide-2.png"
@@ -93,7 +93,7 @@ const WorkData = [
       "Application web dynamique permettant de poster, publier, écouter et lire des histoires.",
     date: "2024-03-10",
     type: "web",
-    file_url: "/assets/image/histories.png",
+    file_url: null,
     slide_image_urls: [
       "/assets/image/gfonts.png",
       "/assets/image/projet-1.png",

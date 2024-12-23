@@ -48,7 +48,13 @@ export default function Work() {
                   key={key}
                   type={item.type || "Description indisponible"}
                   title={item.title_work}
-                  image={load ? api_url + item.file_url : item.file_url}
+                  image={
+                    item.file_url
+                      ? load
+                        ? api_url + item.file_url
+                        : item.file_url
+                      : "/assets/image/projectcycle.webp"
+                  }
                   to={load ? item.id_work : key}
                 />
               );
