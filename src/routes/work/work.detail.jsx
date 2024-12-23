@@ -72,7 +72,7 @@ export default function WorkDetail() {
               ? "/assets/image/loading.png"
               : data?.file_url?.startsWith("/uploads")
               ? `${url}${data?.file_url}`
-              : data?.file_url || "/assets/image/default.png"
+              : data?.file_url || "/assets/image/projectcycle.webp"
           }
           alt="Aperçu du projet"
           className="w-full max-h-[500px] object-cover object-center"
