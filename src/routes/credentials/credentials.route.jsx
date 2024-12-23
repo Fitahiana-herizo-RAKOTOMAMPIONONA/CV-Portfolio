@@ -30,7 +30,7 @@ export default function Credentials() {
             </div>
         </div>
         <div className="h-full lg:col-span-2 lg:p-8 ">
-            <div className="p-6">
+            <div className="">
                 <div className="uppercase font-semibold text-xl pt-4 pb-4">
                     A propos de moi
                 </div>
