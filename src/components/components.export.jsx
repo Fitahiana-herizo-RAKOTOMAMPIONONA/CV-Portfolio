@@ -16,7 +16,8 @@ import AutoSlideCarousel from "./caroussel/caroussel.components";
 import Footer from "./footer/footer";
 import NavBar from "./navbar/nav.bar";
 import { Navigation } from "./navigation/navigation";
+import LanguageChart from "./pieChart/pieChart";
 import { Titre } from "./titre/titre.text";
 import Titre2 from "./titre/titre.text2";
 
-export {AutoSlideCarousel, ComposantWork ,CommentCard, CardBlogDetail ,CardBlog, BoxSearch, BoxService ,BoxContact ,BoxWork ,CardAccueil, CardDeco ,CredentialsComponent ,CardExperience ,Statistique, SkillsComponent ,Footer ,Navigation ,NavBar , Titre ,Titre2}
+export {LanguageChart ,AutoSlideCarousel, ComposantWork ,CommentCard, CardBlogDetail ,CardBlog, BoxSearch, BoxService ,BoxContact ,BoxWork ,CardAccueil, CardDeco ,CredentialsComponent ,CardExperience ,Statistique, SkillsComponent ,Footer ,Navigation ,NavBar , Titre ,Titre2}

@@ -4,21 +4,21 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
     extend: {
-      animation:  "marquee 5s linera infinite",
+      animation: {
+        marquee: "marquee 5s linear infinite",
+      },
       keyframes: {
         marquee: {
           from: {
-            transform: "translateX(100%)"
+            transform: "translateX(100%)",
           },
-          to:{
-            transform: "translateX(-100%)"
-          }
-        }
-      }
-    }
+          to: {
+            transform: "translateX(-100%)",
+          },
+        },
+      },
+    },
   },
   plugins: [],
 }
-
