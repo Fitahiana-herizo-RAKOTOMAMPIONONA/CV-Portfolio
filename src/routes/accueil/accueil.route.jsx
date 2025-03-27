@@ -34,11 +34,6 @@ export default function Accueil() {
       <div className="cardBox3 backgroundPers text-sm p-5 rounded-2xl max-h-[70px] md:col-span-2 text-center inline-block overflow-hidden">
         <span className="animate-marquee whitespace-nowrap">
           Salut .c'est herizo
-          Salut .c'est herizo
-          Salut .c'est herizo
-          Salut .c'est herizo
-          Salut .c'est herizo
-          Salut .c'est herizo
         </span>
       </div>
 
