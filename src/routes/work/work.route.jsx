@@ -37,7 +37,8 @@ export default function Work() {
   return (
     <div className="cardG">
       <Titre
-        title="Tous les projets"
+        title="Projets"
+        description="Découvrez mes realisation le plus recents."
         className={"col-span-2 text-3xl lg:text-6xl"}
       />
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
