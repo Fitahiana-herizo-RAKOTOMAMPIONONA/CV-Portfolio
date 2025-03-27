@@ -1,8 +1,14 @@
-export function Titre(props)
-{
-    return <div className={`uppercase font-semibold pt-5 pb-5  flex lg:text-2xl ${props.className}`}>
-        <img src="/assets/image/star-2.png" alt="" srcSet="" className="w-6 h-6"/>
+export function Titre(props) {
+  return (
+    <div className="pt-5 pb-5">
+      <div
+        className={`uppercase font-semibold pt-5 pb-5 flex lg:text-2xl text-[#FF5733] ${props.className}`}
+      >
         {props.title}
-        <img src="/assets/image/star-2.png" alt="" srcSet="" className="w-6 h-6"/>
+      </div>
+      <div>
+        {props.description}
+      </div>
     </div>
+  );
 }
