@@ -1,3 +1,5 @@
+import { FaReact, FaCss3Alt, FaNodeJs, FaDatabase } from "react-icons/fa";
+
 const WorkData = [
   {
     id_work: 1,
@@ -24,7 +26,11 @@ const WorkData = [
     remarks: null,
     is_archived: 0,
     visibility: "public",
-    technologies_used: ["ReactJS", "CSS", "Node.js"],
+    technologies_used: [
+      { name: "ReactJS", icon: <FaReact /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "Node.js", icon: <FaNodeJs /> }
+    ],
     rating: null,
     live_url: "https://voteo.example.com",
     github_url: "https://github.com/username/voteo"
@@ -52,7 +58,11 @@ const WorkData = [
     remarks: null,
     is_archived: 0,
     visibility: "public",
-    technologies_used: ["ReactJS", "CSS", "Node.js"],
+    technologies_used: [
+      { name: "ReactJS", icon: <FaReact /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "Node.js", icon: <FaNodeJs /> }
+    ],
     rating: null,
     live_url: "https://sary-tsart.example.com",
     github_url: "https://github.com/username/sary-tsart"
@@ -81,7 +91,12 @@ const WorkData = [
     remarks: "Projet complet.",
     is_archived: 0,
     visibility: "public",
-    technologies_used: ["Flutter", "Node.js", "Socket.io", "MySQL"],
+    technologies_used: [
+      { name: "Flutter", icon: <FaReact /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Socket.io", icon: <FaDatabase /> },
+      { name: "MySQL", icon: <FaDatabase /> }
+    ],
     rating: 5,
     live_url: "https://chat-traductor.example.com",
     github_url: "https://github.com/username/chat-traductor"
@@ -110,7 +125,12 @@ const WorkData = [
     remarks: "Expérience enrichissante en collaboration.",
     is_archived: 0,
     visibility: "public",
-    technologies_used: ["ReactJS", "TailwindCSS", "Node.js", "MySQL"],
+    technologies_used: [
+      { name: "ReactJS", icon: <FaReact /> },
+      { name: "TailwindCSS", icon: <FaCss3Alt /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "MySQL", icon: <FaDatabase /> }
+    ],
     rating: 4.5,
     live_url: "https://histories.example.com",
     github_url: "https://github.com/username/histories"
@@ -139,7 +159,10 @@ const WorkData = [
     remarks: "Application du concept de react.",
     is_archived: 0,
     visibility: "public",
-    technologies_used: ["ReactJS", "Css"],
+    technologies_used: [
+      { name: "ReactJS", icon: <FaReact /> },
+      { name: "CSS", icon: <FaCss3Alt /> }
+    ],
     rating: 2.5,
     live_url: "https://histories.example.com",
     github_url: "https://github.com/username/histories"

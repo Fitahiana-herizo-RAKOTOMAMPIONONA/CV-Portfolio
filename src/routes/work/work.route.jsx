@@ -22,6 +22,7 @@ export default function Work() {
         setData(result.data.data);
         setLoad(true);
       }
+      setData(WorkData);
     } catch (error) {
       console.log(error);
       setData(WorkData);
@@ -43,20 +44,15 @@ export default function Work() {
       />
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {load == true || data.length > 0
-          ? data.map((item, key) => {
+          ? data.map((item,key) => {
               return (
                 <BoxWork
+                  key={key}
                   image={item.file_url}
                   title={item.title_work}
                   type={item.type}
                   description="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                  technologies={[
-                    "Dart",
-                    "Flutter",
-                    "Javascript",
-                    "Node",
-                    "MySQL",
-                  ]}
+                  technologies={item.technologies_used}
                   to="lyrify"
                 />
               );
