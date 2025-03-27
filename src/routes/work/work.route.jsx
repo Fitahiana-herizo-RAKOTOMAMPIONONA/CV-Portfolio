@@ -46,17 +46,18 @@ export default function Work() {
           ? data.map((item, key) => {
               return (
                 <BoxWork
-                  key={key}
-                  type={item.type || "Description indisponible"}
+                  image={item.file_url}
                   title={item.title_work}
-                  image={
-                    item.file_url
-                      ? load
-                        ? api_url + item.file_url
-                        : item.file_url
-                      : "/assets/image/projectcycle.webp"
-                  }
-                  to={load ? item.id_work : key}
+                  type={item.type}
+                  description="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  technologies={[
+                    "Dart",
+                    "Flutter",
+                    "Javascript",
+                    "Node",
+                    "MySQL",
+                  ]}
+                  to="lyrify"
                 />
               );
             })

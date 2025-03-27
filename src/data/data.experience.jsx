@@ -1,5 +1,6 @@
 const experience = [
   {
+    image: "assets/icone/ocenetrade.png",
     title: "OceaneTrade madagascar",
     poste: "Developpeur Mobile",
     date: "janvier 2025 -  aujourd'hui",
@@ -76,18 +77,21 @@ const experience = [
 
 const formation = [
   {
-    title: "Licence Informatique",
-    poste: "ISPM",
+    image: "ispm.png",
+    poste: "Licence Informatique",
+    title: "ISPM",
     date: "2021 - aujourd'hui",
   },
   {
-    title: "BaccLaureat - serie C - Assez bien",
-    poste: "ISF Mahamasina",
+    image : "isf.png",
+    poste: "BaccLaureat - serie C - Assez bien",
+    title: "ISF Mahamasina",
     date: "2021",
   },
   {
-    title: "BEPC option B",
-    poste: "ESC Anosizato",
+    image : "esca.png",
+    poste: "BEPC option B",
+    title: "ESC Anosizato",
     date: "2018",
   },
 ];
