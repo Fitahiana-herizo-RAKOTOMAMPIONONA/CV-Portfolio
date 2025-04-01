@@ -76,8 +76,8 @@ const WorkData = [
     type: "mobile",
     file_url: "",
     slide_image_urls: [
-      "/assets/slides/chat-traductor-slide-1.png",
-      "/assets/slides/chat-traductor-slide-2.png"
+      "/assets/image/chat.png",
+      "/assets/image/chat.png"
     ],
     created_at: "2024-12-20T03:14:00.000Z",
     updated_at: null,
@@ -98,8 +98,8 @@ const WorkData = [
       { name: "MySQL", icon: <FaDatabase /> }
     ],
     rating: 5,
-    live_url: "https://chat-traductor.example.com",
-    github_url: "https://github.com/username/chat-traductor"
+    live_url: "https://chat-traductor.vercel.app/",
+    github_url: "https://github.com/i-tsaho/CHAT.git"
   },
   {
     id_work: 4,

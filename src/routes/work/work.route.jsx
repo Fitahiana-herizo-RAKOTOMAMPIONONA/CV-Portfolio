@@ -16,12 +16,12 @@ export default function Work() {
   const fetchdata = async () => {
     let result;
     try {
-      const url = import.meta.env.VITE_API_URL + "/work/all";
-      result = await axios.get(url);
-      if (result.data.data.length > 0) {
-        setData(result.data.data);
-        setLoad(true);
-      }
+      // const url = import.meta.env.VITE_API_URL + "/work/all";
+      // result = await axios.get(url);
+      // if (result.data.data.length > 0) {
+      //   setData(result.data.data);
+      //   setLoad(true);
+      // }
       setData(WorkData);
     } catch (error) {
       console.log(error);
@@ -51,7 +51,7 @@ export default function Work() {
                   image={item.file_url}
                   title={item.title_work}
                   type={item.type}
-                  description="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  description={item.description_work}
                   technologies={item.technologies_used}
                   to="lyrify"
                 />
