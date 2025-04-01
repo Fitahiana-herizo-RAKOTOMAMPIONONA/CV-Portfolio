@@ -65,6 +65,7 @@ export function BoxWork(props) {
         </div>
 
         <div className="flex gap-2 justify-between items-center">
+          {/* <CustomActionButton icone={<FaPlay />} title="Plus" to={props.to}/> */}
           <CustomActionButton icone={<BsGithub />} title="code" to={props.github_url} />
           <CustomActionButton icone={<FaPlay />} title="Demo" to={props.live_url}/>
         </div>
@@ -75,12 +76,14 @@ export function BoxWork(props) {
 
 const CustomActionButton = (props) => {
   return (
-    <Link
-      to={props.to}
-      className="text-gray-400 hover:text-white text-sm flex items-center bg-slate-600 px-3 py-1 rounded flex-1  justify-center ${props.className}"
+    <a
+      href={props.to}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`text-gray-400 hover:text-white text-sm flex items-center bg-slate-600 px-3 py-1 rounded flex-1 justify-center ${props.className}`}
     >
       {props.icone}
       {props.title}
-    </Link>
+    </a>
   );
 };

@@ -55,6 +55,7 @@ export default function Work() {
                   technologies={item.technologies_used}
                   live_url={item.live_url}
                   github_url={item.github_url}
+                  to={`/work/${item.id_work}`}
                 />
               );
             })
