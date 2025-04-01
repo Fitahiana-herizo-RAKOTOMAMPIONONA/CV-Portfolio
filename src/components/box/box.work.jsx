@@ -65,8 +65,8 @@ export function BoxWork(props) {
         </div>
 
         <div className="flex gap-2 justify-between items-center">
-          <CustomActionButton icone={<BsGithub />} title="code" to="" />
-          <CustomActionButton icone={<FaPlay />} title="Demo" to=""/>
+          <CustomActionButton icone={<BsGithub />} title="code" to={props.github_url} />
+          <CustomActionButton icone={<FaPlay />} title="Demo" to={props.live_url}/>
         </div>
       </div>
     </div>
