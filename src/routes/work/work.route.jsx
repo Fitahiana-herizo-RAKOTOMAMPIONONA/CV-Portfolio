@@ -53,7 +53,8 @@ export default function Work() {
                   type={item.type}
                   description={item.description_work}
                   technologies={item.technologies_used}
-                  to="lyrify"
+                  live_url={item.live_url}
+                  github_url={item.github_url}
                 />
               );
             })
