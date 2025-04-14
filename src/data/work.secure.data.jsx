@@ -3,6 +3,35 @@ import { FaReact, FaCss3Alt, FaNodeJs, FaDatabase } from "react-icons/fa";
 const WorkData = [
   {
     id_work: 1,
+    title_work: "fuzzy_levenshtein_search",
+    description_work:
+      "Un package Flutter/Dart pour effectuer des recherches approximatives (fuzzy search)dans une liste de chaînes à l\'aide de la distance de Levenshtein.",
+    date: "2025-04-14",
+    type: "package - Flutter",
+    file_url: "/assets/image/levenshtein.png",
+    slide_image_urls: [],
+    created_at: "2025-04-14T03:14:00.000Z",
+    updated_at: null,
+    status: "terminé",
+    author: "Herizo",
+    category: "package",
+    tags: ["package", "flutter", "dart", "pub.dev"],
+    progress: 100,
+    client_name: "Open source",
+    team_members: ["Herizo Fitahiana"],
+    remarks: "Projet complet.",
+    is_archived: 0,
+    visibility: "public",
+    technologies_used: [
+      { name: "Dart", icon: <FaReact /> },
+      { name: "Flutter", icon: <FaReact /> },
+    ],
+    rating: 5,
+    live_url: "https://pub.dev/packages/fuzzy_levenshtein_search",
+    github_url: "https://github.com/Fitahiana-herizo-RAKOTOMAMPIONONA/fuzzy_levenshtein_search.git",
+  },
+  {
+    id_work: 2,
     title_work: "Chat Traductor",
     description_work:
       "Application mobile de chat en temps réel avec traduction multilingue, supportant actuellement l'anglais, le français et le malgache.",
@@ -33,7 +62,7 @@ const WorkData = [
     github_url: "https://github.com/i-tsaho/CHAT.git",
   },
   {
-    id_work: 2,
+    id_work: 3,
     title_work: "Voteo",
     description_work:
       "Application de vote en ligne qui facilite les tâches des administrateurs et organisateurs de scrutin et offre davantage de réduction du temps perdu, réduction des coûts ainsi qu'une sécurité accrue.",
@@ -67,7 +96,7 @@ const WorkData = [
     github_url: "https://github.com/Fitahiana-herizo-RAKOTOMAMPIONONA/voteo22",
   },
   {
-    id_work: 3,
+    id_work: 4,
     title_work: "DactyloTrain",
     description_work:
       "Application sous Linux/windows permettant d'améliorer la vitesse de frappe en mesurant les WPM (mots par minute) et en proposant des exercices interactifs pour perfectionner la dactylographie.",
@@ -100,7 +129,7 @@ const WorkData = [
     github_url: "https://github.com/Fitahiana-herizo-RAKOTOMAMPIONONA/DactyloTrain",
   },
   {
-    id_work: 4,
+    id_work: 5,
     title_work: "Sary Ts'art",
     description_work: "Application web de réseau social.",
     date: "2004-04-05",
@@ -132,7 +161,7 @@ const WorkData = [
     github_url: "",
   },
   {
-    id_work: 5,
+    id_work: 6,
     title_work: "Histories",
     description_work:
       "Application web dynamique permettant de poster, publier, écouter et lire des histoires.",
@@ -166,7 +195,7 @@ const WorkData = [
     github_url: "https://github.com/username/histories",
   },
   {
-    id_work: 6,
+    id_work: 7,
     title_work: "CommuneHub",
     description_work:
       "Application web statique permettant de faciliter les taches d' administrater au sein d'une commune.",
