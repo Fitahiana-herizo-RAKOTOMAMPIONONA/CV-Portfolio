@@ -36,7 +36,12 @@ const WorkAdmin = () => {
     }, [data])
     return (
         <div className="w-full m-auto p-5">
+            <div className="flex justify-between items-center">
             <Titre title="work" className="text-6xl"/>
+            <Button>
+                add
+            </Button>
+            </div>
             <div className="grid grid-cols-5 font-bold capitalize italic text-blue-700 text-end backgroundPers p-4">
                 <div>
                     Id
