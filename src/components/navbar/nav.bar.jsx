@@ -58,7 +58,7 @@ return (
                 </button>
                 <div
                     className={`${
-                        isMenuActive ? "block sm:flex gap-5" : "hidden sm:flex gap-10"
+                        isMenuActive ? "block md:flex gap-5" : "hidden md:flex gap-10"
                     }`}
                 >
                     {navListe.map((item, key) => (
@@ -75,7 +75,7 @@ return (
                         </div>
                     ))}
                 </div>
-                <div className="flex gap-5 items-center">
+                <div className="hidden gap-5 items-center sm:visible sm:flex">
                     <CardReseaux
                         to={"https://github.com/Fitahiana-herizo-RAKOTOMAMPIONONA"}
                         icon={<BsGithub />}

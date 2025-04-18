@@ -8,6 +8,7 @@ import WorkAdmin from './admin/work.admin';
 import { BoxSearch } from './components/components.export';
 import { NotFound } from './routes/notFound/notFound.route';
 import EditWork from './admin/edit.work';
+import AdminPage from './admin/admin.page';
 
 function App() {
   return (
@@ -25,11 +26,11 @@ function App() {
             <Route path='/service' element={<Service />} />
             <Route path='/blog' element={<Blog/>}/>
             <Route path='/blog/:id_blog' element={<BlogDetail/>}/>
+            <Route path='/admin' element={<AdminPage />} />
             <Route path='/admin/work' element={<WorkAdmin />} />
             <Route path='/admin/work/post' element={<PostWork />} />
             <Route path='/admin/work/edit/:id' element={<EditWork />} />
             <Route path="*" element={<NotFound />} />
-            
           </Routes>
         </div>
         <Footer />
